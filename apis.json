@@ -1,0 +1,139 @@
+{
+    "name": "Adobe I\/O",
+    "description": "Adobe I\/O is the place for developers looking to integrate, extend, or create apps. Explore Adobe product APIs, SDKs and documentation.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28403-www-adobe-io.jpg",
+    "tags": [
+        "api provider",
+        "cloud",
+        "have api",
+        "have swagger",
+        "json",
+        "open source",
+        "postman",
+        "profile",
+        "webhook implementations"
+    ],
+    "created": "2019-12-18",
+    "modified": "2019-12-18",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/adobe-io\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Adobe I\/O",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28403-www-adobe-io.jpg",
+            "humanURL": "https:\/\/www.adobe.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/adobe-io.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/adobe-io-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/adobe-io-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "Analytics Services APIs",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28403-www-adobe-io.jpg",
+            "humanURL": "https:\/\/www.adobe.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/analytics-services-apis.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/analytics-services-apis-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/analytics-services-apis-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "Behance API V2 Documentation",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28403-www-adobe-io.jpg",
+            "humanURL": "https:\/\/www.adobe.io",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/behance-api-v2-documentation.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/behance-api-v2-documentation-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/behance-api-v2-documentation-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Authentication",
+            "url": "https:\/\/www.adobe.io\/authentication.html"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/medium.com\/adobetech"
+        },
+        {
+            "type": "Contact Form",
+            "url": "https:\/\/www.adobe.io\/contactus.html"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.adobe.io\/apis.html"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/adobe"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28403-2019-09-03-17-35-42.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28403-2019-09-04-06-55-41.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28403-2019-09-03-22-46-12.json"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/AdobeIO"
+        },
+        {
+            "type": "Webhooks",
+            "url": "https:\/\/www.adobe.io\/apis\/cloudplatform\/events\/documentation.html#!adobeio\/adobeio-documentation\/master\/events\/intro\/webhook_docs_intro.md"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.adobe.io"
+        },
+        {
+            "type": "Youtube",
+            "url": "https:\/\/www.youtube.com\/channel\/UCDtYqOjS9Eq9gacLcbMwhhQ"
+        }
+    ]
+}
