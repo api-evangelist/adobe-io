@@ -1,0 +1,5187 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2.0.0",
+        "title": "Behance API V2 Documentation",
+        "description": "Access the data behind millions of creative projects and users.",
+        "termsOfService": "https:\/\/www.adobe.com\/legal\/terms.html"
+    },
+    "servers": [
+        "http:\/\/cc-api-behance.adobe.io\/v2"
+    ],
+    "paths": {
+        "\/activity": {
+            "get": {
+                "summary": "Get a user's activity feed",
+                "description": "Get the authenticated user's activity feed.",
+                "operationId": "GetActivityFeed",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/activity\/since": {
+            "get": {
+                "summary": "Get a user's feed by timestamp",
+                "description": "Get the authenticated user's activity feed from the specified timestamp forward.",
+                "operationId": "GetActivityFeedSince",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "onset_ts",
+                        "in": "query",
+                        "description": "Unix timestamp describing the time from which to fetch the activity feed."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ccn\/{networkId}\/member": {
+            "get": {
+                "summary": "Get membership status",
+                "description": "Get membership status of the authenticated user.",
+                "operationId": "GetCCNMemberStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add a new CCN member",
+                "description": "Add the authenticated user to the CCN.",
+                "operationId": "PostCCNMemberStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a CCN membership",
+                "description": "Remove the authenticated user from the CCN.",
+                "operationId": "DeleteCCNMemberStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/collections": {
+            "get": {
+                "summary": "Search and filter collections",
+                "description": "Search and filter collections.",
+                "operationId": "GetCollections",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a collection",
+                "description": "Create a collection of projects.",
+                "operationId": "PostCollections",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "formData",
+                        "description": "The title of the collection to be created."
+                    },
+                    {
+                        "name": "projects",
+                        "in": "formData",
+                        "description": "A pipe delimited string of integer project IDs to add to the collection."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/collections\/{collectionId}": {
+            "get": {
+                "summary": "Get a single collection",
+                "description": "Get a single collection.",
+                "operationId": "GetCollection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a collection",
+                "description": "Update a collection.",
+                "operationId": "PutCollection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "formData",
+                        "description": "The title of the collection to be created."
+                    },
+                    {
+                        "name": "privacy",
+                        "in": "formData",
+                        "description": "The collection's privacy setting."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a collection",
+                "description": "Delete a collection.",
+                "operationId": "DeleteCollection",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/collections\/{collectionId}\/projects": {
+            "get": {
+                "summary": "List projects",
+                "description": "List projects belonging to the specified collection.",
+                "operationId": "GetCollectionProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add projects to a collection",
+                "description": "Add projects to a collection.",
+                "operationId": "PostCollectionProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "projects",
+                        "in": "formData",
+                        "description": "A pipe delimited string of integer project IDs to add to the collection."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/collections\/{collectionId}\/projects\/{projectId}": {
+            "delete": {
+                "summary": "Remove project from collection",
+                "description": "Remove a project from a collection.",
+                "operationId": "DeleteCollectionProject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/collections\/{collectionId}\/coowners": {
+            "get": {
+                "summary": "List owners",
+                "description": "List the owners of the collection.",
+                "operationId": "GetCollectionCoowners",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add an owner",
+                "description": "Add an owner to the collection.",
+                "operationId": "PostCollectionCoowners",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "coowner",
+                        "in": "formData",
+                        "description": "The integer user ID to add as a collection owner."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/collections\/{collectionId}\/coowners\/{userId}": {
+            "delete": {
+                "summary": "Remove an owner",
+                "description": "Remove an owner from the collection.",
+                "operationId": "DeleteCollectionCoowner",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/creativestofollow": {
+            "get": {
+                "summary": "Get a list of top users",
+                "description": "Get a list of top users.",
+                "operationId": "GetCreativesToFollow",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/fields": {
+            "get": {
+                "summary": "Get creative fields",
+                "description": "Retrieve a full list of creative fields.",
+                "operationId": "GetFields",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/foryou\/projects": {
+            "get": {
+                "summary": "Get recommended projects",
+                "description": "Get recommended projects for the authenticated user.",
+                "operationId": "GetForYouProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The number of projects to return per page."
+                    },
+                    {
+                        "name": "styles",
+                        "in": "query",
+                        "description": "Set to 1 to include project styles with each result."
+                    },
+                    {
+                        "name": "appreciated",
+                        "in": "query",
+                        "description": "Set to 1 to include the authenticated user's appreciation status with each result."
+                    },
+                    {
+                        "name": "colors",
+                        "in": "query",
+                        "description": "Set to 1 to include project colors data with each result."
+                    },
+                    {
+                        "name": "featured_on",
+                        "in": "query",
+                        "description": "Set to 1 to include project feature data with each result."
+                    },
+                    {
+                        "name": "card",
+                        "in": "query",
+                        "description": "Set to 1 to receive a limited representation of the user."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/galleries": {
+            "get": {
+                "summary": "List galleries",
+                "description": "List galleries.",
+                "operationId": "GetGalleries",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/galleries\/{galleryId}": {
+            "get": {
+                "summary": "Get a single gallery",
+                "description": "Get a single gallery.",
+                "operationId": "GetGallery",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/galleries\/{galleryId}\/follow": {
+            "post": {
+                "summary": "Follow a gallery",
+                "description": "Follow a gallery on behalf of the authenticated user.",
+                "operationId": "PostGalleryFollow",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unfollow a gallery",
+                "description": "Unfollow a gallery on behalf of the authenticated user.",
+                "operationId": "DeleteGalleryFollow",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/locations\/countries": {
+            "get": {
+                "summary": "Get a list of countries",
+                "description": "Get a list of countries.",
+                "operationId": "GetLocationCountries",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/locations\/regions": {
+            "get": {
+                "summary": "Get a list of regions",
+                "description": "Get a list of regions.",
+                "operationId": "GetLocationRegions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "country_code",
+                        "in": "query",
+                        "description": "The country code to retrieve regions from."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/locations\/cities": {
+            "get": {
+                "summary": "Get a list of cities",
+                "description": "Get a list of cities.",
+                "operationId": "GetLocationCities",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "country_code",
+                        "in": "query",
+                        "description": "The country code to retrieve regions from."
+                    },
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "The region\/state abbreviation to retrieve cities from."
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "A query string to match the city name against."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/live\/notifications": {
+            "get": {
+                "summary": "Get live video subscription status",
+                "description": "Get subscription status for upcoming live video notifications.",
+                "operationId": "GetLiveNotifications",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Subscribe to live video notifications",
+                "description": "Subscribe to live video notifications on behalf of the authenticated user.",
+                "operationId": "PostLiveNotifications",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unsubscribe from live video notifications",
+                "description": "Unsubscribe from live video notifications on behalf of the authenticated user.",
+                "operationId": "DeleteLiveNotifications",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "\/live\/videos": {
+            "get": {
+                "summary": "Get live videos",
+                "description": "Get a list of live videos.",
+                "operationId": "GetLiveVideos",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "url",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "schedule",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/live\/replays": {
+            "get": {
+                "summary": "Get live video replays",
+                "description": "Get a list of live video replays.",
+                "operationId": "GetLiveVideoReplays",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "creative_category",
+                        "in": "query",
+                        "description": "A creative category ID to filter the results by."
+                    },
+                    {
+                        "name": "num",
+                        "in": "query",
+                        "description": "The number of results to return per page."
+                    },
+                    {
+                        "name": "max_start_time",
+                        "in": "query",
+                        "description": "The date\/time of the most recent replay."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The result page number of the results."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/live\/video\/{videoId}": {
+            "get": {
+                "summary": "Get a live video",
+                "description": "Get a live video.",
+                "operationId": "GetLiveVideo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications": {
+            "get": {
+                "summary": "Get notifications",
+                "description": "Get notifications for the authenticated user.",
+                "operationId": "GetNotifications",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/count": {
+            "get": {
+                "summary": "Get notification count",
+                "description": "Get the total number of unread notifications for the authenticated user.",
+                "operationId": "GetNotificationCount",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/{notificationId}": {
+            "get": {
+                "summary": "Get a single notification",
+                "description": "Get a single notification.",
+                "operationId": "GetNotification",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/projects\/{projectId}\/comments": {
+            "get": {
+                "summary": "Get project comment notifications",
+                "description": "Get a list of project comment notifications for the specified project.",
+                "operationId": "GetProjectCommentNotifications",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/projects\/{projectId}\/comments\/count": {
+            "get": {
+                "summary": "Get project comment notification count",
+                "description": "Get the total number of unread comment notifications for the specified project.",
+                "operationId": "GetProjectCommentNotificationCount",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/invitations": {
+            "get": {
+                "summary": "Get invitation notifications",
+                "description": "Get invitation notifications for the authenticated user.",
+                "operationId": "GetInvitationNotifications",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/notifications\/invitations\/{invitationId}": {
+            "put": {
+                "summary": "Accept an invitation",
+                "description": "Accept an invitation on behalf of the authenticated user.",
+                "operationId": "PutInvitationNotification",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Decline an invitation",
+                "description": "Decline an invitation on behalf of the authenticated user.",
+                "operationId": "DeleteInvitationNotification",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/onboarding": {
+            "post": {
+                "summary": "Complete onboarding",
+                "description": "Complete onboarding on behalf of the authenticated user.",
+                "operationId": "PostOnboarding",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "categories",
+                        "in": "formData",
+                        "description": "A pipe delimited string of integer category IDs."
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        },
+        "\/project\/editor": {
+            "post": {
+                "summary": "Create a project",
+                "description": "Create a project.",
+                "operationId": "PostProjectEditor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "formData",
+                        "description": "The title of the collection to be created."
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "fields",
+                        "in": "formData",
+                        "description": "A pipe delimited string of creative fields."
+                    },
+                    {
+                        "name": "license",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "allow_comments",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "background_color",
+                        "in": "formData",
+                        "description": "The background color for the project. A color hex code."
+                    },
+                    {
+                        "name": "mature_content",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "published",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "tags",
+                        "in": "formData",
+                        "description": "A pipe delimited string of search tags."
+                    },
+                    {
+                        "name": "conceived_on",
+                        "in": "formData",
+                        "description": "Unix epoch time in seconds representing when the project was idealized."
+                    },
+                    {
+                        "name": "tools",
+                        "in": "formData",
+                        "description": "A pipe delimited string of tool integer IDs."
+                    },
+                    {
+                        "name": "credits",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to credit on the project."
+                    },
+                    {
+                        "name": "coowners",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to be added as co-owners of the project."
+                    },
+                    {
+                        "name": "teams",
+                        "in": "formData",
+                        "description": "A pipe delimited string of team integer IDs to associate with the project."
+                    },
+                    {
+                        "name": "privacy",
+                        "in": "formData",
+                        "description": "The collection's privacy setting."
+                    },
+                    {
+                        "name": "visible_to",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to limit the project's visibility to."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/{projectId}": {
+            "patch": {
+                "summary": "Modify a project",
+                "description": "Modify a project.",
+                "operationId": "PatchProjectEditor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "title",
+                        "in": "formData",
+                        "description": "The title of the collection to be created."
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "fields",
+                        "in": "formData",
+                        "description": "A pipe delimited string of creative fields."
+                    },
+                    {
+                        "name": "license",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "allow_comments",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "background_color",
+                        "in": "formData",
+                        "description": "The background color for the project. A color hex code."
+                    },
+                    {
+                        "name": "mature_content",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "published",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "tags",
+                        "in": "formData",
+                        "description": "A pipe delimited string of search tags."
+                    },
+                    {
+                        "name": "conceived_on",
+                        "in": "formData",
+                        "description": "Unix epoch time in seconds representing when the project was idealized."
+                    },
+                    {
+                        "name": "tools",
+                        "in": "formData",
+                        "description": "A pipe delimited string of tool integer IDs."
+                    },
+                    {
+                        "name": "credits",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to credit on the project."
+                    },
+                    {
+                        "name": "coowners",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to be added as co-owners of the project."
+                    },
+                    {
+                        "name": "teams",
+                        "in": "formData",
+                        "description": "A pipe delimited string of team integer IDs to associate with the project."
+                    },
+                    {
+                        "name": "privacy",
+                        "in": "formData",
+                        "description": "The collection's privacy setting."
+                    },
+                    {
+                        "name": "visible_to",
+                        "in": "formData",
+                        "description": "A pipe delimited string of user integer IDs to limit the project's visibility to."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/{projectId}\/clone": {
+            "post": {
+                "summary": "Clone an existing project",
+                "description": "Clone an existing project.",
+                "operationId": "PostProjectClone",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/{projectId}\/reorder": {
+            "patch": {
+                "summary": "Reposition a project in the user's portfolio",
+                "description": "Moves the position of the project in the user's portfolio, relative to another project.",
+                "operationId": "PatchProjectReorder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "after_project_id",
+                        "in": "formData",
+                        "description": "The project ID after which this project should appear in the user's portfolio."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/{projectId}\/modules": {
+            "post": {
+                "summary": "Create a new project module",
+                "description": "Create a new project module.",
+                "operationId": "PostProjectModules",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "original_width",
+                        "in": "formData",
+                        "description": "Applies only to embed modules. The original width of the embed object."
+                    },
+                    {
+                        "name": "original_height",
+                        "in": "formData",
+                        "description": "Applies only to embed modules. The original height of the embed object."
+                    },
+                    {
+                        "name": "alignment",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "caption",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "caption_alignment",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "full_bleed",
+                        "in": "formData",
+                        "description": "Display the module at full width without any padding. Module must be at least 1400px wide."
+                    },
+                    {
+                        "name": "html",
+                        "in": "formData",
+                        "description": "Can be basic HTML or plain text. Required when creating a text or embed module."
+                    },
+                    {
+                        "name": "source_url",
+                        "in": "formData",
+                        "description": "Source URL of the image\/video in our temporary S3 bucket. Required for video, audio, and image modules."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/{projectId}\/modules\/{moduleId}": {
+            "patch": {
+                "summary": "Modify a project module",
+                "description": "Modify a project module.",
+                "operationId": "PatchProjectModule",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "original_embed",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "original_width",
+                        "in": "formData",
+                        "description": "Applies only to embed modules. The original width of the embed object."
+                    },
+                    {
+                        "name": "original_height",
+                        "in": "formData",
+                        "description": "Applies only to embed modules. The original height of the embed object."
+                    },
+                    {
+                        "name": "width_unit",
+                        "in": "query",
+                        "description": "The unit of measurement used in the original_width key"
+                    },
+                    {
+                        "name": "alignment",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "caption",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "caption_alignment",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "full_bleed",
+                        "in": "formData",
+                        "description": "Display the module at full width without any padding. Module must be at least 1400px wide."
+                    },
+                    {
+                        "name": "html",
+                        "in": "formData",
+                        "description": "Can be basic HTML or plain text. Required when creating a text or embed module."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a project module",
+                "description": "Delete a project module.",
+                "operationId": "DeleteProjectModule",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/auto_sign_request": {
+            "post": {
+                "summary": "Generate a signed S3 URL",
+                "description": "Generates a signed URL and object key with which a client can upload binary data to our temporary S3 bucket. Data lives in this bucket for up to 24 hours.",
+                "operationId": "PostSinglePart",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "extension",
+                        "in": "formData",
+                        "description": "The file extension of the asset to be uploaded."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/auto_sign_multipart\/initiate": {
+            "post": {
+                "summary": "Intitiate a multipart upload.",
+                "description": "Initiate a multipart upload. This is the first step of the multipart upload flow.",
+                "operationId": "PostMultiPartInitiate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "extension",
+                        "in": "formData",
+                        "description": "The file extension of the asset to be uploaded."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/auto_sign_multipart\/upload": {
+            "post": {
+                "summary": "Generate a presigned multipart S3 URL",
+                "description": "Generate a presigned multipart S3 URL.",
+                "operationId": "PostMultiPartUpload",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "part_number",
+                        "in": "formData",
+                        "description": "The part number of the object to be uploaded. This should be 1 if it is the first part, 2 if it is the second, and so on. These numbers are used to reconstruct the object on AWS's side."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/auto_sign_multipart\/complete": {
+            "post": {
+                "summary": "Complete a multipart upload",
+                "description": "Completes a multipart upload after all parts have been uploaded.",
+                "operationId": "PostMultiPartComplete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/project\/editor\/auto_sign_multipart\/abort": {
+            "post": {
+                "summary": "Abort an in progress multipart upload",
+                "description": "Abort an in progress multipart upload.",
+                "operationId": "PostMultiPartAbort",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "\/projects": {
+            "get": {
+                "summary": "Search and filter projects",
+                "description": "Search and filter projects.",
+                "operationId": "GetProjects",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/drafts": {
+            "get": {
+                "summary": "Get project drafts",
+                "description": "Get project drafts for the authenticated user.",
+                "operationId": "GetProjectDrafts",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}": {
+            "get": {
+                "summary": "Get a single project",
+                "description": "Get a single project.",
+                "operationId": "GetProject",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}\/comments": {
+            "get": {
+                "summary": "Get project comments",
+                "description": "Get the comments associated with a specific project.",
+                "operationId": "GetProjectComments",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}\/collections": {
+            "get": {
+                "summary": "Get project collections",
+                "description": "Get the collections associated with a specific project.",
+                "operationId": "GetProjectCollections",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}\/view": {
+            "post": {
+                "summary": "View a project",
+                "description": "View a project on behalf of the authenticated user.",
+                "operationId": "PostProjectView",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}\/appreciate": {
+            "post": {
+                "summary": "Appreciate a project",
+                "description": "Appreciate a project on behalf of the authenticated user.",
+                "operationId": "PostProjectAppreciation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unappreciate a project",
+                "description": "Unappreciate a project on behalf of the authenticated user.",
+                "operationId": "DeleteProjectAppreciation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{projectId}\/credits\/{userId}": {
+            "delete": {
+                "summary": "Delete a project credit",
+                "description": "Remove a credited user from a project.",
+                "operationId": "DeleteProjectAppreciation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/report\/{entityType}\/{entityId}": {
+            "post": {
+                "summary": "Report an entity",
+                "description": "Report an entity as spam to be reviewed by the moderation team.",
+                "operationId": "PostModerationReport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "entityType",
+                        "in": "path",
+                        "description": "The entity type to submit a report against."
+                    },
+                    {
+                        "name": "entityId",
+                        "in": "path",
+                        "description": "The entity ID to submit a report against."
+                    },
+                    {
+                        "name": "reason",
+                        "in": "formData",
+                        "description": "The entity type to submit a report against. Acceptable values include 10 (copyright), 12 (offensive content), 14 (trademark infringement), 15 (adult content), 16 (privacy issue), and 18 (spam)."
+                    },
+                    {
+                        "name": "message",
+                        "in": "formData",
+                        "description": "An arbitrary message supplied by the user or application submitting the report."
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "If not supplying an access token, an email address belonging to the person reporting the offense."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/settings\/browsing": {
+            "get": {
+                "summary": "Get user browser settings",
+                "description": "Get the authenticated user's browser settings.",
+                "operationId": "GetUserBrowserSettings",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Modify user browser settings",
+                "description": "Modify the authenticated user's browser settings.",
+                "operationId": "PostUserBrowserSettings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "safe",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/tags": {
+            "get": {
+                "summary": "Search for tags",
+                "description": "Search for tags.",
+                "operationId": "GetTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a tag",
+                "description": "Create a tag.",
+                "operationId": "PostTags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "formData",
+                        "description": "The title of the collection to be created."
+                    },
+                    {
+                        "name": "category",
+                        "in": "formData",
+                        "description": "A pipe delimited string of integer tag category IDs."
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/talent\/provisions": {
+            "get": {
+                "summary": "Get talent provisioning",
+                "description": "Retrieve the talent provisioning level for the authenticated user.",
+                "operationId": "GetTalentProvisions",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/talent\/jobs": {
+            "get": {
+                "summary": "Get job searches",
+                "description": "Retrieve the job searches owned by the authenticated user.",
+                "operationId": "GetTalentJobSearches",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/talent\/jobs\/{jobId}\/details": {
+            "get": {
+                "summary": "Get job listing",
+                "description": "Get a single job listing.",
+                "operationId": "GetTalentJobListing",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/talent\/jobs\/{jobId}\/candidates": {
+            "get": {
+                "summary": "Get a list of candidates",
+                "description": "Get a list of candidates for the specified job listing.",
+                "operationId": "GetTalentJobListingCandidates",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/talent\/jobs\/{jobId}\/recommendations": {
+            "patch": {
+                "summary": "Get candidate recommendations",
+                "description": "Get a list of recommended candidates.",
+                "operationId": "PatchTalentJobListingRecommendations",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams": {
+            "get": {
+                "summary": "Search and filter teams",
+                "description": "Search and filter teams.",
+                "operationId": "GetTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "The query to search against"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "sort_order",
+                        "in": "query",
+                        "description": "The direction in which the results should be returned"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The result page number of the results."
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "The number of results to return per page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a team",
+                "description": "Create a team.",
+                "operationId": "PostTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}": {
+            "get": {
+                "summary": "Get a single team",
+                "description": "Get a single team.",
+                "operationId": "GetTeam",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a team",
+                "description": "Delete a team.",
+                "operationId": "DeleteTeam",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update a team",
+                "description": "Update a team.",
+                "operationId": "PatchTeam",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/view": {
+            "post": {
+                "summary": "Increment view count",
+                "description": "Increment the view count for the specified team by one.",
+                "operationId": "PostTeamView",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/member_projects": {
+            "get": {
+                "summary": "Get projects",
+                "description": "Get projects belonging to the specified team.",
+                "operationId": "GetTeamMemberProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/members": {
+            "get": {
+                "summary": "Get team members",
+                "description": "Get a list of all members in a team.",
+                "operationId": "GetTeamMembers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add team members",
+                "description": "Add members to a team with a role.",
+                "operationId": "PostTeamMembers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_ids",
+                        "in": "formData",
+                        "description": "A comma delimited string of integer user IDs"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/members\/{userId}": {
+            "delete": {
+                "summary": "Delete a team member",
+                "description": "Delete a team member",
+                "operationId": "DeleteTeamMember",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Modify a team member",
+                "description": "Modify a team member's role or position in the member list.",
+                "operationId": "PatchTeamMember",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "after_id",
+                        "in": "formData",
+                        "description": "The integer ID of the user to place this user after in the member list"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/followers": {
+            "get": {
+                "summary": "Get team followers",
+                "description": "Get a list of all followers of a team.",
+                "operationId": "GetTeamFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Follow a team",
+                "description": "Follow a team on behalf of the authenticated user.",
+                "operationId": "PostTeamFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unfollow a team",
+                "description": "Unfollow a team on behalf of the authenticated user.",
+                "operationId": "DeleteTeamFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/projects": {
+            "get": {
+                "summary": "Get team projects",
+                "description": "Get a list of team projects.",
+                "operationId": "GetTeamProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add project(s) to a team",
+                "description": "Add one or more projects to a team",
+                "operationId": "PostTeamProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "project_id",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/teams\/{teamId}\/project\/{projectId}": {
+            "delete": {
+                "summary": "Remove a project",
+                "description": "Remove a project from the team.",
+                "operationId": "TeamProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users": {
+            "get": {
+                "summary": "Search and filter users",
+                "description": "Search and filter users.",
+                "operationId": "GetUsers",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}": {
+            "get": {
+                "summary": "Get a single user",
+                "description": "Get a single user.",
+                "operationId": "GetUser",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/me": {
+            "get": {
+                "summary": "Get the authenticated user",
+                "description": "Get the authenticated user.",
+                "operationId": "GetAuthenticatedUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/livestreams": {
+            "get": {
+                "summary": "Get live streams",
+                "description": "Get a user's live streams.",
+                "operationId": "GetUserLivestreams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The number of projects to return per page."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a live stream",
+                "description": "Create a live stream.",
+                "operationId": "PostUserLivestreams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/livestreams\/{streamId}": {
+            "get": {
+                "summary": "Get a live stream",
+                "description": "Get a live stream.",
+                "operationId": "GetUserLivestream",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "A comma delimited string of extra fields (\"lftoken\") to include with the stream."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Modify a live stream",
+                "description": "Modify a live stream.",
+                "operationId": "PatchUserLivestream",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "is_live",
+                        "in": "formData",
+                        "description": "Toggle the live stream on or off."
+                    },
+                    {
+                        "name": "is_chat_on",
+                        "in": "formData",
+                        "description": "Toggle the live stream chat on or off."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/projects": {
+            "get": {
+                "summary": "Get a user's projects",
+                "description": "Get a user's projects.",
+                "operationId": "GetUserProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/email_subscriptions\/{emailId}": {
+            "put": {
+                "summary": "Subscribe to an email notification",
+                "description": "Subscribe to an email notification",
+                "operationId": "PutUserEmailSubscription",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unsubscribe from an email notification",
+                "description": "Unsubscribe from an email notification",
+                "operationId": "PutUserEmailSubscription",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/follow": {
+            "post": {
+                "summary": "Follow a user",
+                "description": "Follow the user defined in the route path on behalf of the authenticated user.",
+                "operationId": "PostUserFollow",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Unfollow a user",
+                "description": "Unfollow the user defined in the route path on behalf of the authenticated user.",
+                "operationId": "DeleteUserFollow",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/followers": {
+            "get": {
+                "summary": "Get a user's followers",
+                "description": "Get a user's followers.",
+                "operationId": "GetUserFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/following": {
+            "get": {
+                "summary": "Get a user's following list",
+                "description": "Get a list of users the specified user is following.",
+                "operationId": "GetUserFollowing",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/stats": {
+            "get": {
+                "summary": "Get a user's stats",
+                "description": "Get a user's stats.",
+                "operationId": "GetUserStats",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/teams": {
+            "get": {
+                "summary": "Get a user's teams.",
+                "description": "Get a user's teams.",
+                "operationId": "GetUserTeams",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/work_experience": {
+            "get": {
+                "summary": "Get a user's work experience",
+                "description": "Get a user's work experience.",
+                "operationId": "GetUserWorkExperience",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/appreciations": {
+            "get": {
+                "summary": "Get appreciated projects",
+                "description": "Get a list of projects the user has appreciated.",
+                "operationId": "GetUserAppreciations",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/collections": {
+            "get": {
+                "summary": "Get a user's collections",
+                "description": "Get a list of the user's collections.",
+                "operationId": "GetUserCollections",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/flags\/{flagName}": {
+            "post": {
+                "summary": "Enable a flag on a user",
+                "description": "Enable a flag on a user",
+                "operationId": "PostUserFlag",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "flagName",
+                        "in": "path",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/users\/{userId}\/view": {
+            "post": {
+                "summary": "Increment profile view count",
+                "description": "Increment the view count on the given user's profile.",
+                "operationId": "PostUserView",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}": {
+            "get": {
+                "summary": "Get a user's work in progress",
+                "description": "Get a user's work in progress.",
+                "operationId": "GetWIPStory",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}\/segments": {
+            "get": {
+                "summary": "Get a work in progress' segments",
+                "description": "Get a work in progress' segments.",
+                "operationId": "GetWIPSegments",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a segment",
+                "description": "Create a segment.",
+                "operationId": "PostWIPSegment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "segment_source_url",
+                        "in": "formData",
+                        "description": "A URL for the segment's media on our temporary S3 bucket."
+                    },
+                    {
+                        "name": "poster_source_url",
+                        "in": "formData",
+                        "description": "A URL for the poster source (when media is a video)."
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "duration",
+                        "in": "formData",
+                        "description": "The duration of media in milliseconds."
+                    },
+                    {
+                        "name": "is_mature",
+                        "in": "formData",
+                        "description": "Mark this segment as containing mature content."
+                    },
+                    {
+                        "name": "project_id",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "annotation_source_url",
+                        "in": "formData",
+                        "description": "A URL representing the transparent PNG annotation overlay."
+                    },
+                    {
+                        "name": "latitude",
+                        "in": "formData",
+                        "description": "The latitude where the segment was created."
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "formData",
+                        "description": "The latitude where the segment was created."
+                    },
+                    {
+                        "name": "session_id",
+                        "in": "formData",
+                        "description": "Optional session ID for logging purposes."
+                    },
+                    {
+                        "name": "annotations",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}\/segments\/{segmentId}": {
+            "get": {
+                "summary": "Get a segment",
+                "description": "Get a work in progress segment.",
+                "operationId": "GetWIPSegment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a segment",
+                "description": "Delete a work in progress segment.",
+                "operationId": "DeleteWIPSegment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions": {
+            "get": {
+                "summary": "Get a segment's reactions",
+                "description": "Get a list of reactions left on a segment.",
+                "operationId": "GetWIPSegmentReactions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions\/{reactorId}": {
+            "put": {
+                "summary": "React to a segment",
+                "description": "React to a segment.",
+                "operationId": "PutWIPSegmentReaction",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete segment reaction",
+                "description": "Delete a segment reaction.",
+                "operationId": "DeleteWIPSegmentReaction",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/{userId}\/segments\/{segmentId}\/views": {
+            "get": {
+                "summary": "Get segment views",
+                "description": "Get a list of viewers of a segment. The owner of the segment is not included in the list. This list can only be viewed by the story owner.",
+                "operationId": "GetWIPStorySegmentViews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create segment view",
+                "description": "Mark the segment viewed by the authenticated user and increment the segment's view count by one.",
+                "operationId": "PostWIPStorySegmentViews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "No Name",
+                        "in": "query",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/filters": {
+            "get": {
+                "summary": "Get a list of segment search filters",
+                "description": "Search segments regardless of work in progress affiliation.",
+                "operationId": "GetWIPSegmentFilters",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/workinprogress\/list": {
+            "get": {
+                "summary": "Get a list of works in progress",
+                "description": "Get a list of works in progress.",
+                "operationId": "GetWIPList",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "list",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "start_time",
+                        "in": "query",
+                        "description": "The earliest unix timestamp of the works in progress."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The number of projects to return per page."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The result page number of the results."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/profile\/editor": {
+            "post": {
+                "summary": "Update a user's public profile",
+                "description": "Update a user's public profile.",
+                "operationId": "PostProfileEditor",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "first_name",
+                        "in": "formData",
+                        "description": "The user's first name"
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "formData",
+                        "description": "The user's last name"
+                    },
+                    {
+                        "name": "occupation",
+                        "in": "formData",
+                        "description": "The user's occupation"
+                    },
+                    {
+                        "name": "company",
+                        "in": "formData",
+                        "description": "The user's company\/employer"
+                    },
+                    {
+                        "name": "location_id",
+                        "in": "formData",
+                        "description": "An ID representing the user's location"
+                    },
+                    {
+                        "name": "website",
+                        "in": "formData",
+                        "description": "The user's website"
+                    },
+                    {
+                        "name": "city",
+                        "in": "formData",
+                        "description": "The user's city of residence"
+                    },
+                    {
+                        "name": "state",
+                        "in": "formData",
+                        "description": "The user's state of residence"
+                    },
+                    {
+                        "name": "country",
+                        "in": "formData",
+                        "description": "The user's country of residence"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/profile\/avatar": {
+            "post": {
+                "summary": "Update a user's avatar",
+                "description": "Update a user's avatar.",
+                "operationId": "PostProfileAvatar",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "source_url",
+                        "in": "formData",
+                        "description": "Source URL of the image\/video in our temporary S3 bucket. Required for video, audio, and image modules."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a user's avatar",
+                "description": "Delete a user's avatar.",
+                "operationId": "DeleteProfileAvatar",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/TalentSearchListing"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ActivityFeed": {
+                "type": "object",
+                "properties": {
+                    "has_more": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "earliest_ts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "latest_ts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "has_more": {
+                "type": "object"
+            },
+            "earliest_ts": {
+                "type": "object"
+            },
+            "latest_ts": {
+                "type": "object"
+            },
+            "data": {
+                "type": "object"
+            },
+            "ActivityFeedAction": {
+                "type": "object",
+                "properties": {
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "type": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "created_on": {
+                "type": "object"
+            },
+            "type": {
+                "type": "object"
+            },
+            "Collection": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "owners": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "privacy": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "latest_projects": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "owners": {
+                "type": "array"
+            },
+            "stats": {
+                "type": "object"
+            },
+            "latest_projects": {
+                "type": "array"
+            },
+            "Comment": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comment": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "first_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "city": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "The future location in S3 of the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "company": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "occupation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "images": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "fields": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "has_default_image": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "website": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "UserStats": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "twitter": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "sections": {
+                        "description": "An object with arbitrary string key\/value pairs representing the sections that appear on a user's profile.",
+                        "type": "object"
+                    },
+                    "social_links": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "CuratedGallery": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "display_order": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ribbon_1x": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ribbon_2x": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ribbon_3x": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ribbon_vector": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "label_en": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "latest_projects": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "queues": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "queues": {
+                "type": "array"
+            },
+            "CreativeField": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Invitation": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "subject": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "other_user_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "other_user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "project": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "project": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "description": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "published_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "conveived_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "privacy": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "fields": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "covers": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "mature_content": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "mature_access": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "owners": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "LiveVideo": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "etag": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "thumbnail_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_timestamp": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "duration_seconds": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "users": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tools": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "modified_on": {
+                "type": "object"
+            },
+            "users": {
+                "type": "array"
+            },
+            "tools": {
+                "type": "array"
+            },
+            "LiveStream": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "video_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "stream_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "chat": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "viewers": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "view_urls": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "stream_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "is_live": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "chat": {
+                "type": "object"
+            },
+            "view_urls": {
+                "type": "object"
+            },
+            "is_live": {
+                "type": "object"
+            },
+            "LiveStreamChat": {
+                "type": "object",
+                "properties": {
+                    "enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "network": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "site_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "article_id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "collection_id": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Notification": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "read_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "action_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "action_key": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "data": {
+                        "description": "The data pertaining to the notification. While \"project\" and \"actor\" are\nprovided as example object properties here, this key may also be \"false\"\nor contain other properties depending on the notification type.\n",
+                        "type": "object"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "read_on": {
+                "type": "object"
+            },
+            "ProjectCommentNotification": {
+                "type": "object"
+            },
+            "ProjectModule": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "project_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "full_bleed": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "alignment": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "caption_alignment": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "html": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "full_bleed": {
+                "type": "object"
+            },
+            "PresignedS3Object": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "description": "The S3 object key name generated for the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "The future location in S3 of the asset to be uploaded.",
+                        "type": "string"
+                    }
+                }
+            },
+            "SocialLink": {
+                "type": "object",
+                "properties": {
+                    "social_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "service_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserStats": {
+                "type": "object",
+                "properties": {
+                    "followers": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "following": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "appreciations": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "views": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "team_members": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "UserProfileStats": {
+                "type": "object",
+                "properties": {
+                    "project_views": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "project_appreciations": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "project_comments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "profile_views": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "images": {
+                "type": "object"
+            },
+            "fields": {
+                "type": "object"
+            },
+            "links": {
+                "type": "array"
+            },
+            "sections": {
+                "type": "object"
+            },
+            "social_links": {
+                "type": "array"
+            },
+            "name": {
+                "type": "object"
+            },
+            "description": {
+                "type": "object"
+            },
+            "privacy": {
+                "type": "object"
+            },
+            "covers": {
+                "type": "object"
+            },
+            "mature_access": {
+                "type": "object"
+            },
+            "ProjectStats": {
+                "type": "object",
+                "properties": {
+                    "appreciations": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "views": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category_label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "synonym": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "approved": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "synonym": {
+                "type": "object"
+            },
+            "approved": {
+                "type": "object"
+            },
+            "TagSynonym": {
+                "type": "object",
+                "properties": {
+                    "tag_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "download_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "gallery_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "authenticated": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "icon_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "icon_url_2x": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "authenticated": {
+                "type": "object"
+            },
+            "TalentSearchListing": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "company": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "The future location in S3 of the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "posted_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "expires_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "archived_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "allow_remote": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "is_posted": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "is_expired": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "fields": {
+                        "description": "An object where the keys are the creative field IDs and the values are the string representation.",
+                        "type": "object"
+                    },
+                    "location_country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location_country_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location_stateprov": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location_stateprov_code": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location_city": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "announcements": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "anouncements_values": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "is_full_time": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "last_candidate_added_on": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "other_locations": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "allow_apply": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "is_creator": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "owners": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "team": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "posted_on": {
+                "type": "object"
+            },
+            "expires_on": {
+                "type": "object"
+            },
+            "archived_on": {
+                "type": "object"
+            },
+            "allow_remote": {
+                "type": "object"
+            },
+            "tags": {
+                "type": "array"
+            },
+            "_links": {
+                "type": "object"
+            },
+            "announcements": {
+                "type": "array"
+            },
+            "anouncements_values": {
+                "type": "object"
+            },
+            "last_candidate_added_on": {
+                "type": "object"
+            },
+            "allow_apply": {
+                "type": "object"
+            },
+            "team": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "website": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "images": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "location": {
+                        "description": "The future location in S3 of the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "location_link": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "city": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "featured_on": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "is_following": {
+                        "description": "Will be 1 if the authenticated user is following the team, and 0 if not.",
+                        "type": "integer"
+                    },
+                    "about": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "is_verified": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "invite_only": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "stats": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "features": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "is_member": {
+                        "description": "Will be 1 if the authenticated user is a member of the team, and 0 if not.",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "social_links": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "features": {
+                "type": "array"
+            },
+            "TeamStats": {
+                "type": "object",
+                "properties": {
+                    "members": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "projects": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "wips": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "followers": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "appreciations": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "views": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "hideFollowing": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "jobs": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "FeatureQueue": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "FeatureQueueSite": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "key": {
+                        "description": "The S3 object key name generated for the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "icon": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "domain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "network_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "ribbon": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "featured_on": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ribbon": {
+                "type": "object"
+            },
+            "UserTeamAvatarRenditions": {
+                "type": "object",
+                "properties": {
+                    "50": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "100": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "115": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "138": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "230": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "276": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "WorkExperience": {
+                "type": "object",
+                "properties": {
+                    "position": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "end_date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organization": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "The future location in S3 of the asset to be uploaded.",
+                        "type": "string"
+                    }
+                }
+            },
+            "DimensionSet": {
+                "type": "object",
+                "properties": {
+                    "width": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "height": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "WIPSegment": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "is_viewed": {
+                        "description": "True if the authenticated user has viewed the segment, false otherwise.",
+                        "type": "boolean"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "short_url": {
+                        "description": "A shortened deep link to view the segment.",
+                        "type": "string"
+                    },
+                    "DimensionSet": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "original_dimensions": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "duration_millis": {
+                        "description": "The duration of the video or image in milliseconds.",
+                        "type": "integer"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "mentions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "project": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "privacy": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "privacy_users": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "reactions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "view_count": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "reaction_count": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "viewer_reaction": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "posted_date": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "expiration_date": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "mature_content": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "mature_access": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "media": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "annotations": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "poster": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "annotation_links": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "mentions": {
+                "type": "array"
+            },
+            "privacy_users": {
+                "type": "array"
+            },
+            "reactions": {
+                "type": "array"
+            },
+            "viewer_reaction": {
+                "type": "object"
+            },
+            "media": {
+                "type": "array"
+            },
+            "annotations": {
+                "type": "array"
+            },
+            "poster": {
+                "type": "object"
+            },
+            "annotation_links": {
+                "type": "array"
+            },
+            "WIPStory": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "entity_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "is_viewed": {
+                        "description": "True if the authenticated user has viewed the segment, false otherwise.",
+                        "type": "boolean"
+                    },
+                    "is_ignored": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "is_featured": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "first_unviewed_segment_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "owner": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "short_url": {
+                        "description": "A shortened deep link to view the segment.",
+                        "type": "string"
+                    },
+                    "segments": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "metadata": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "segments": {
+                "type": "array"
+            },
+            "metadata": {
+                "type": "array"
+            },
+            "WIPSegmentReaction": {
+                "type": "object",
+                "properties": {
+                    "segment_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_on": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "modified_on": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "WIPSegmentReactionAggregate": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "WIPSegmentMedia": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "description": "The S3 object key name generated for the asset to be uploaded.",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DimensionSet": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "dimensions": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "AnnotationLink": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "segment_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "content": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "coordinates": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "coordinates": {
+                "type": "array"
+            },
+            "TwoDimensionalPoint": {
+                "type": "object",
+                "properties": {
+                    "x": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "y": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "WIPSegmentFilter": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "children": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "children": {
+                "type": "array"
+            }
+        }
+    }
+}
