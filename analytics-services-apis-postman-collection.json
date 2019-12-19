@@ -1,0 +1,201 @@
+{
+    "id": "7c2cc7885d5bfda724f80c7b2df78ed9",
+    "name": "Analytics Services APIs",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "25ae90441ca19561811ac7722ff78b8a",
+            "name": "Retrieves paginated calculated metrics",
+            "url": "http:\/\/mc.adobe.io\/mc\/analytics\/reporting\/calculatedmetrics",
+            "description": "A calculated metric response will always include these default items: *id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field:\n\n* *modified*: Date that the metric was last modified (ISO 8601)\n* *definition*: Calculated metric definition as JSON object\n* *compatibility*: Products that the metric is compatible with\n* *reportSuiteName*: Also return the friendly Report Suite name for the RSID\n* *favorite*: True if calculated metric has been m",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "expansion",
+                    "description": "Comma-delimited list of additional calculated metric metadata fields to include on response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "includeType",
+                    "description": "Include additional calculated metrics not owned by user. The \"all\" option takes precedence over \"shared\"",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "rsids",
+                    "description": "Filter list to only include calculated metrics tied to specified RSID list (comma-delimited)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dataType",
+                    "description": "Filter list to only include calculated metrics compatible with the specified product",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ownerId",
+                    "description": "Filter list to only include calculated metrics owned by the specified loginId",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "calculatedMetricFilter",
+                    "description": "Filter list to only include calculated metrics in the specified list (comma-delimited list of IDs)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filterByIds",
+                    "description": "Filter list to only include calculated metrics in the specified list (comma-delimited list of IDs) (this is the same as calculatedMetricFilter, and is overwritten by calculatedMetricFilter",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "toBeUsedInRsid",
+                    "description": "The report suite where the calculated metric intended to be used.  This report suite will be used to determine things like compatibility and permissions.  If it is not specified then the permissions will be calculated based on the union of all metrics authorized in all groups the user belongs to.  If the compatibility expansion is specified and toBeUsedInRsid is not then the compatibility returned is based off the compatibility from the last time the calculated metric was saved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "locale",
+                    "description": "Locale",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Filter list to only include calculated metrics that contains the Name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dataGroup",
+                    "description": "Filter list to only include calculated metrics with the given dataGroup",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tagNames",
+                    "description": "Filter list to only include calculated metrics that contains one of the tags",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "favorite",
+                    "description": "Filter list to only include calculated metrics that are favorites",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "approved",
+                    "description": "Filter list to only include calculated metrics that are approved",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pagination",
+                    "description": "return paginated results",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filterByModifiedAfter",
+                    "description": "Filter list to only include calculated metrics modified since this date (ISO8601 format)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "includeDeleted",
+                    "description": "DEPRECATED use deleted includeType - include disabled calculated metrics in results",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of results per page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number (base 0 - first page is \"0\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7c2cc7885d5bfda724f80c7b2df78ed9",
+            "rawModeData": ""
+        },
+        {
+            "id": "44da2599ef89dba4192ee179e1aef179",
+            "name": "Creates a new calculated metric",
+            "url": "http:\/\/mc.adobe.io\/mc\/analytics\/reporting\/calculatedmetrics",
+            "description": "Creates a new calculated metric. The following attributes are available when creating a calculated metric:\n\nIMPORTANT: Required Fields: name, definition, rsid\n\nOptional fields: description\n\nExample definition for use in testing API below (\"Page exists\"):\n\n```json\n\n{\"definition\":{},\"version\":[1,0,0]}\n```\n\nA calculated metric response will always include these default items:* id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field as defined",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "expansion",
+                    "description": "Comma-delimited list of additional calculated metric metadata fields to include on response.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "7c2cc7885d5bfda724f80c7b2df78ed9",
+            "rawModeData": ""
+        }
+    ]
+}
