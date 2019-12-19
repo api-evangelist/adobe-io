@@ -1,0 +1,4466 @@
+{
+    "id": "22a6df2eb1a6ccbba3d2716265d43b51",
+    "name": "Behance API V2 Documentation",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "17d104988aabd0b0a17298d5e6cdc1a2",
+            "name": "Get a user's activity feed",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/activity",
+            "description": "Get the authenticated user's activity feed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e6537cfb0c96113e4c4e0a5872ecf749",
+            "name": "Get a user's feed by timestamp",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/activity\/since",
+            "description": "Get the authenticated user's activity feed from the specified timestamp forward.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "onset_ts",
+                    "description": "Unix timestamp describing the time from which to fetch the activity feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "fce2a1d69ac1660125aba2b96f328085",
+            "name": "Get membership status",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
+            "description": "Get membership status of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "48ce4a3dc298c40d7796f03268930275",
+            "name": "Add a new CCN member",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
+            "description": "Add the authenticated user to the CCN.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "78748cee266a3e61ce44a9aa0e8bd39f",
+            "name": "Delete a CCN membership",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
+            "description": "Remove the authenticated user from the CCN.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ae030e512ec3ae53ac3cf15a697e4fd5",
+            "name": "Search and filter collections",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections",
+            "description": "Search and filter collections.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "465d1d0c8be221c534e3b2d2e136c412",
+            "name": "Create a collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections",
+            "description": "Create a collection of projects.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "The title of the collection to be created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "projects",
+                    "description": "A pipe delimited string of integer project IDs to add to the collection.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a939f1ca89d5f31b6343d03beb112ef",
+            "name": "Get a single collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
+            "description": "Get a single collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6039a27fcab011be2866398ef75d42d",
+            "name": "Update a collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
+            "description": "Update a collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "The title of the collection to be created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "privacy",
+                    "description": "The collection's privacy setting.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "743f793a1c442ff7eac3efa604dd8e32",
+            "name": "Delete a collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
+            "description": "Delete a collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c72cfe758a85c638de847f16aec6af6e",
+            "name": "List projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects",
+            "description": "List projects belonging to the specified collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e9236f6b70e28d8fa8cf3b9b889c2bc5",
+            "name": "Add projects to a collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects",
+            "description": "Add projects to a collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "projects",
+                    "description": "A pipe delimited string of integer project IDs to add to the collection.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "a9719795eac72ad02cc5b58850288f5e",
+            "name": "Remove project from collection",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects\/{projectId}",
+            "description": "Remove a project from a collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "230b7b7da1fa23483b7125fb00c546c5",
+            "name": "List owners",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners",
+            "description": "List the owners of the collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "adc080718ad0f6c1252a89896673fae8",
+            "name": "Add an owner",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners",
+            "description": "Add an owner to the collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "coowner",
+                    "description": "The integer user ID to add as a collection owner.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "8a7a9258471bf509aec368402569f6fd",
+            "name": "Remove an owner",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners\/{userId}",
+            "description": "Remove an owner from the collection.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "70b346bf6adc87239148cbd53aeed622",
+            "name": "Get a list of top users",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/creativestofollow",
+            "description": "Get a list of top users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "70eba8563b8d08a15f689f101f734a44",
+            "name": "Get creative fields",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/fields",
+            "description": "Retrieve a full list of creative fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a807a73122ffba7c9dd16b374ebd07f",
+            "name": "Get recommended projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/foryou\/projects",
+            "description": "Get recommended projects for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The number of projects to return per page.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "styles",
+                    "description": "Set to 1 to include project styles with each result.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "appreciated",
+                    "description": "Set to 1 to include the authenticated user's appreciation status with each result.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "colors",
+                    "description": "Set to 1 to include project colors data with each result.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "featured_on",
+                    "description": "Set to 1 to include project feature data with each result.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "card",
+                    "description": "Set to 1 to receive a limited representation of the user.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "f4c3241566751eedb972f706229cb49d",
+            "name": "List galleries",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries",
+            "description": "List galleries.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ddcaa59f227629c2e59211ccf03e5e2e",
+            "name": "Get a single gallery",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}",
+            "description": "Get a single gallery.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "4f950fdea7c6208a94502f6e94af6173",
+            "name": "Follow a gallery",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}\/follow",
+            "description": "Follow a gallery on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2c079f6f4bd2052355ff1284f62f259",
+            "name": "Unfollow a gallery",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}\/follow",
+            "description": "Unfollow a gallery on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "11eacb4f02b9d836fe54acee41c49207",
+            "name": "Get a list of countries",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/countries",
+            "description": "Get a list of countries.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c7438aca8aa38a33bb86a93fe13aab81",
+            "name": "Get a list of regions",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/regions",
+            "description": "Get a list of regions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "country_code",
+                    "description": "The country code to retrieve regions from.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "3ed892e33263c711e89c151ce894289f",
+            "name": "Get a list of cities",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/cities",
+            "description": "Get a list of cities.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "country_code",
+                    "description": "The country code to retrieve regions from.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "The region\/state abbreviation to retrieve cities from.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "query",
+                    "description": "A query string to match the city name against.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d67ed283259f401680b68d5ce5451ce2",
+            "name": "Get live video subscription status",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
+            "description": "Get subscription status for upcoming live video notifications.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "af27288b4fda2b17f9bea35526198469",
+            "name": "Subscribe to live video notifications",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
+            "description": "Subscribe to live video notifications on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e8a7388549af7ad18337fbf04b5a40e9",
+            "name": "Unsubscribe from live video notifications",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
+            "description": "Unsubscribe from live video notifications on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "75db03131c00926d734418d2aa6fce0f",
+            "name": "Get live videos",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/videos",
+            "description": "Get a list of live videos.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "url",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "schedule",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "4053ae7b993fd9d8b72d2e5ab9ae052f",
+            "name": "Get live video replays",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/replays",
+            "description": "Get a list of live video replays.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "creative_category",
+                    "description": "A creative category ID to filter the results by.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "num",
+                    "description": "The number of results to return per page.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max_start_time",
+                    "description": "The date\/time of the most recent replay.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "The result page number of the results.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7c9fb7b4ee4e5c8e10ea339925b52c5c",
+            "name": "Get a live video",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/video\/{videoId}",
+            "description": "Get a live video.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c49ab6657664434c06c35fc9120212c1",
+            "name": "Get notifications",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications",
+            "description": "Get notifications for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "14fe1bb9774d0b84bf9375c0eb051e77",
+            "name": "Get notification count",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/count",
+            "description": "Get the total number of unread notifications for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "db602e31f1180a8539dcc3a01b193e7c",
+            "name": "Get a single notification",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/{notificationId}",
+            "description": "Get a single notification.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ffccf16548411a0b12c77ed31883bc3f",
+            "name": "Get project comment notifications",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/projects\/{projectId}\/comments",
+            "description": "Get a list of project comment notifications for the specified project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "02ca6ff083e854440edab14662dd7a77",
+            "name": "Get project comment notification count",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/projects\/{projectId}\/comments\/count",
+            "description": "Get the total number of unread comment notifications for the specified project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e685fbe906561536ed1849be3b1959f5",
+            "name": "Get invitation notifications",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations",
+            "description": "Get invitation notifications for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "72b69d07debead81fb30a6b67f896ffc",
+            "name": "Accept an invitation",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations\/{invitationId}",
+            "description": "Accept an invitation on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "89bd5fb8cb201d64c1690376996bc9c1",
+            "name": "Decline an invitation",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations\/{invitationId}",
+            "description": "Decline an invitation on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d68ce67126255603d937f80210f2f634",
+            "name": "Complete onboarding",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/onboarding",
+            "description": "Complete onboarding on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "categories",
+                    "description": "A pipe delimited string of integer category IDs.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "dbd47e1ff5ca633953589fc9eed7db66",
+            "name": "Create a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor",
+            "description": "Create a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "The title of the collection to be created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "description",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "A pipe delimited string of creative fields.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "license",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allow_comments",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "background_color",
+                    "description": "The background color for the project. A color hex code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mature_content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "published",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tags",
+                    "description": "A pipe delimited string of search tags.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "conceived_on",
+                    "description": "Unix epoch time in seconds representing when the project was idealized.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tools",
+                    "description": "A pipe delimited string of tool integer IDs.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "credits",
+                    "description": "A pipe delimited string of user integer IDs to credit on the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "coowners",
+                    "description": "A pipe delimited string of user integer IDs to be added as co-owners of the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teams",
+                    "description": "A pipe delimited string of team integer IDs to associate with the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "privacy",
+                    "description": "The collection's privacy setting.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visible_to",
+                    "description": "A pipe delimited string of user integer IDs to limit the project's visibility to.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b77f7d0440710ac43db397526a8d370",
+            "name": "Modify a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}",
+            "description": "Modify a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "The title of the collection to be created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "description",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "A pipe delimited string of creative fields.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "license",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "allow_comments",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "background_color",
+                    "description": "The background color for the project. A color hex code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mature_content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "published",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tags",
+                    "description": "A pipe delimited string of search tags.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "conceived_on",
+                    "description": "Unix epoch time in seconds representing when the project was idealized.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tools",
+                    "description": "A pipe delimited string of tool integer IDs.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "credits",
+                    "description": "A pipe delimited string of user integer IDs to credit on the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "coowners",
+                    "description": "A pipe delimited string of user integer IDs to be added as co-owners of the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "teams",
+                    "description": "A pipe delimited string of team integer IDs to associate with the project.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "privacy",
+                    "description": "The collection's privacy setting.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visible_to",
+                    "description": "A pipe delimited string of user integer IDs to limit the project's visibility to.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "391d97814e57bdf073334ad3a29602ca",
+            "name": "Clone an existing project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/clone",
+            "description": "Clone an existing project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "eb25f6f65a8846aa8912f5db2fe41046",
+            "name": "Reposition a project in the user's portfolio",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/reorder",
+            "description": "Moves the position of the project in the user's portfolio, relative to another project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "after_project_id",
+                    "description": "The project ID after which this project should appear in the user's portfolio.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd16ac8463674f5fe9302755e265aee4",
+            "name": "Create a new project module",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules",
+            "description": "Create a new project module.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "original_width",
+                    "description": "Applies only to embed modules. The original width of the embed object.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "original_height",
+                    "description": "Applies only to embed modules. The original height of the embed object.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "alignment",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "caption",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "caption_alignment",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "full_bleed",
+                    "description": "Display the module at full width without any padding. Module must be at least 1400px wide.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "html",
+                    "description": "Can be basic HTML or plain text. Required when creating a text or embed module.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "source_url",
+                    "description": "Source URL of the image\/video in our temporary S3 bucket. Required for video, audio, and image modules.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5cbf1d8cec5df835e1d0a95ed50ec4c",
+            "name": "Modify a project module",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules\/{moduleId}",
+            "description": "Modify a project module.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "original_embed",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "original_width",
+                    "description": "Applies only to embed modules. The original width of the embed object.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "original_height",
+                    "description": "Applies only to embed modules. The original height of the embed object.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "width_unit",
+                    "description": "The unit of measurement used in the original_width key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "alignment",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "caption",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "caption_alignment",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "full_bleed",
+                    "description": "Display the module at full width without any padding. Module must be at least 1400px wide.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "html",
+                    "description": "Can be basic HTML or plain text. Required when creating a text or embed module.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "543605f898a1d49b805f6679d48c348d",
+            "name": "Delete a project module",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules\/{moduleId}",
+            "description": "Delete a project module.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "cf20dc3bc58f7b3861d82a58a545b73e",
+            "name": "Generate a signed S3 URL",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_request",
+            "description": "Generates a signed URL and object key with which a client can upload binary data to our temporary S3 bucket. Data lives in this bucket for up to 24 hours.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "extension",
+                    "description": "The file extension of the asset to be uploaded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "0f083dcea5c0d06a644fbb56d7cd3d7f",
+            "name": "Intitiate a multipart upload.",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/initiate",
+            "description": "Initiate a multipart upload. This is the first step of the multipart upload flow.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "extension",
+                    "description": "The file extension of the asset to be uploaded.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "693238ee3746368ae32828508359c67c",
+            "name": "Generate a presigned multipart S3 URL",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/upload",
+            "description": "Generate a presigned multipart S3 URL.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "part_number",
+                    "description": "The part number of the object to be uploaded. This should be 1 if it is the first part, 2 if it is the second, and so on. These numbers are used to reconstruct the object on AWS's side.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b3da91efd9eeb8731bbf8801f298acc",
+            "name": "Complete a multipart upload",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/complete",
+            "description": "Completes a multipart upload after all parts have been uploaded.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "77bc97eded88e1789d8ed48bcb765bee",
+            "name": "Abort an in progress multipart upload",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/abort",
+            "description": "Abort an in progress multipart upload.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "9b6af1050f3486ef70eb132129bd54e0",
+            "name": "Search and filter projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects",
+            "description": "Search and filter projects.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "653aafafc77155e1b747337544713c5f",
+            "name": "Get project drafts",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/drafts",
+            "description": "Get project drafts for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "255f66afab04320e2251a57ea9b99583",
+            "name": "Get a single project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}",
+            "description": "Get a single project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6d1324f4b503b30bd36003307dfd723",
+            "name": "Get project comments",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/comments",
+            "description": "Get the comments associated with a specific project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "19f53fad7c98f11df0a8c81c4f49a996",
+            "name": "Get project collections",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/collections",
+            "description": "Get the collections associated with a specific project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c0bc4efec78c3958aad9dd215b077d1d",
+            "name": "View a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/view",
+            "description": "View a project on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7b6eeb5650171a8ea923c440a99f607d",
+            "name": "Appreciate a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/appreciate",
+            "description": "Appreciate a project on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "667e5cdb4ef3ea7a540e6e9ea0c060f9",
+            "name": "Unappreciate a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/appreciate",
+            "description": "Unappreciate a project on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "62bdf62c71404a4a330b7430994df973",
+            "name": "Delete a project credit",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/credits\/{userId}",
+            "description": "Remove a credited user from a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "16c9a8cc8ca46caddb0e708d93a06ce2",
+            "name": "Report an entity",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/report\/{entityType}\/{entityId}",
+            "description": "Report an entity as spam to be reviewed by the moderation team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "entityType",
+                    "description": "The entity type to submit a report against.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "entityId",
+                    "description": "The entity ID to submit a report against.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "reason",
+                    "description": "The entity type to submit a report against. Acceptable values include 10 (copyright), 12 (offensive content), 14 (trademark infringement), 15 (adult content), 16 (privacy issue), and 18 (spam).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message",
+                    "description": "An arbitrary message supplied by the user or application submitting the report.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "email",
+                    "description": "If not supplying an access token, an email address belonging to the person reporting the offense.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "68fa8fe2ee7b0c12af2031168872153c",
+            "name": "Get user browser settings",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/settings\/browsing",
+            "description": "Get the authenticated user's browser settings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "a9cf38dda660ad0b885952a93738b567",
+            "name": "Modify user browser settings",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/settings\/browsing",
+            "description": "Modify the authenticated user's browser settings.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "safe",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "81e76c7611180d24fecaf6510766ec42",
+            "name": "Search for tags",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/tags",
+            "description": "Search for tags.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ffaf53e678c13c573aaf501ecce984a4",
+            "name": "Create a tag",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/tags",
+            "description": "Create a tag.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "The title of the collection to be created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "category",
+                    "description": "A pipe delimited string of integer tag category IDs.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "15da4b3e2dd51a5520b3b72441f0c29b",
+            "name": "Get talent provisioning",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/provisions",
+            "description": "Retrieve the talent provisioning level for the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "597a31e02c36d05f39f6ca97edaef17c",
+            "name": "Get job searches",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs",
+            "description": "Retrieve the job searches owned by the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "777ad86b07c601fa22ddfb08a8821485",
+            "name": "Get job listing",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/details",
+            "description": "Get a single job listing.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "62137897fe6ac1fc2d6e531955891b3d",
+            "name": "Get a list of candidates",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/candidates",
+            "description": "Get a list of candidates for the specified job listing.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ccded97b7b9745f203276ac3f7211c0a",
+            "name": "Get candidate recommendations",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/recommendations",
+            "description": "Get a list of recommended candidates.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "163b1a2417523c0ea49a12fdf3c11327",
+            "name": "Search and filter teams",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams",
+            "description": "Search and filter teams.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "q",
+                    "description": "The query to search against",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort_order",
+                    "description": "The direction in which the results should be returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "The result page number of the results.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "per_page",
+                    "description": "The number of results to return per page",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "26236a3936ffa218b696b8995ce97fe9",
+            "name": "Create a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams",
+            "description": "Create a team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "b4ded850a932fb6c0cd75787b9aa9e83",
+            "name": "Get a single team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
+            "description": "Get a single team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd4735dd25b571eee516c2c808f05e6a",
+            "name": "Delete a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
+            "description": "Delete a team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "73c05438d5b9bc371e92507dc4ccdde8",
+            "name": "Update a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
+            "description": "Update a team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "017ad59a12915d85db7200122c3116b7",
+            "name": "Increment view count",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/view",
+            "description": "Increment the view count for the specified team by one.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "f0fe3a4aa53f18298922f7c6756367a1",
+            "name": "Get projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/member_projects",
+            "description": "Get projects belonging to the specified team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "f36940c952b155c39b0852800f283cd8",
+            "name": "Get team members",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members",
+            "description": "Get a list of all members in a team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "5919e3c450055c1fece238d711522f06",
+            "name": "Add team members",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members",
+            "description": "Add members to a team with a role.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_ids",
+                    "description": "A comma delimited string of integer user IDs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "2a9b0ad93b510794b68e472005342f3e",
+            "name": "Delete a team member",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members\/{userId}",
+            "description": "Delete a team member",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c76c64baece78cc1598fa1964e954fbc",
+            "name": "Modify a team member",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members\/{userId}",
+            "description": "Modify a team member's role or position in the member list.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "after_id",
+                    "description": "The integer ID of the user to place this user after in the member list",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "fad3db8f0c173ff06e9fad360675a24a",
+            "name": "Get team followers",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
+            "description": "Get a list of all followers of a team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "45a747044cb1c9be51cc59eff4fc2b1d",
+            "name": "Follow a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
+            "description": "Follow a team on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "8ca91cfc31e375c9ebec812595665de2",
+            "name": "Unfollow a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
+            "description": "Unfollow a team on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "aff942f3285f4b91a0c8f35287da0d94",
+            "name": "Get team projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/projects",
+            "description": "Get a list of team projects.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "f30d117557eb1f514f5a053530d57ae7",
+            "name": "Add project(s) to a team",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/projects",
+            "description": "Add one or more projects to a team",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "project_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "eff2522efaa211638dc770191abae3e5",
+            "name": "Remove a project",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/project\/{projectId}",
+            "description": "Remove a project from the team.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e6c2941004138fbc0016f0319690d6d8",
+            "name": "Search and filter users",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users",
+            "description": "Search and filter users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ba60f488c2789f16177de59d78591ffd",
+            "name": "Get a single user",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}",
+            "description": "Get a single user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "8d24c45bae7632829e5f8acc3cff1233",
+            "name": "Get the authenticated user",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/me",
+            "description": "Get the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2df78ce63c0384bb0982d10db3997b2",
+            "name": "Get live streams",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams",
+            "description": "Get a user's live streams.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "state",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The number of projects to return per page.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "31f4a1fcfb4d6178fc8073426f676f1b",
+            "name": "Create a live stream",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams",
+            "description": "Create a live stream.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "233bc7db07927254e306cae3fe8612fb",
+            "name": "Get a live stream",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams\/{streamId}",
+            "description": "Get a live stream.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fields",
+                    "description": "A comma delimited string of extra fields (\"lftoken\") to include with the stream.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "73d5f5f7e024375fce7fd61eca0be6e0",
+            "name": "Modify a live stream",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams\/{streamId}",
+            "description": "Modify a live stream.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "is_live",
+                    "description": "Toggle the live stream on or off.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "is_chat_on",
+                    "description": "Toggle the live stream chat on or off.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "fa10978e3165f73cab544b88e55a98b7",
+            "name": "Get a user's projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/projects",
+            "description": "Get a user's projects.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5f31fe3b155172437a80d787df712b1",
+            "name": "Subscribe to an email notification",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/email_subscriptions\/{emailId}",
+            "description": "Subscribe to an email notification",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c36a3fbfa3d827b85c5c521bd3894b7b",
+            "name": "Unsubscribe from an email notification",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/email_subscriptions\/{emailId}",
+            "description": "Unsubscribe from an email notification",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "fc3ac540579f74e16a9a0a2ff94f1499",
+            "name": "Follow a user",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/follow",
+            "description": "Follow the user defined in the route path on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7c794d56b13692eabcfa610d91aa4a76",
+            "name": "Unfollow a user",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/follow",
+            "description": "Unfollow the user defined in the route path on behalf of the authenticated user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "1ca41d07ee513baa49fb6bcde7461620",
+            "name": "Get a user's followers",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/followers",
+            "description": "Get a user's followers.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "222418be43e4db478aab48e6a4a1853b",
+            "name": "Get a user's following list",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/following",
+            "description": "Get a list of users the specified user is following.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "ab6c17e0547ce888034ac8eca76f664c",
+            "name": "Get a user's stats",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/stats",
+            "description": "Get a user's stats.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7f773770e0076359eed0144fce530418",
+            "name": "Get a user's teams.",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/teams",
+            "description": "Get a user's teams.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "9fe296060921f734dd0e45c5c10078e3",
+            "name": "Get a user's work experience",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/work_experience",
+            "description": "Get a user's work experience.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "e3290da386746fcb7ab269fe87a4cb93",
+            "name": "Get appreciated projects",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/appreciations",
+            "description": "Get a list of projects the user has appreciated.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7af88d319e09ff53321c32c8975a3a4d",
+            "name": "Get a user's collections",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/collections",
+            "description": "Get a list of the user's collections.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "1d92604d02069a45f4e84f509d49f8b0",
+            "name": "Enable a flag on a user",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/flags\/{flagName}",
+            "description": "Enable a flag on a user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "flagName",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "2911c8b2b143b45f0050d1af1f5fb576",
+            "name": "Increment profile view count",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/view",
+            "description": "Increment the view count on the given user's profile.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6fc3deb56f2e32e2b04d573a032d73f",
+            "name": "Get a user's work in progress",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}",
+            "description": "Get a user's work in progress.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d715a3fcf190d41ead22fbb6b5a2a735",
+            "name": "Get a work in progress' segments",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments",
+            "description": "Get a work in progress' segments.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "b57881014a612a1e67475111e2ff2cce",
+            "name": "Create a segment",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments",
+            "description": "Create a segment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "segment_source_url",
+                    "description": "A URL for the segment's media on our temporary S3 bucket.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "poster_source_url",
+                    "description": "A URL for the poster source (when media is a video).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "duration",
+                    "description": "The duration of media in milliseconds.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "is_mature",
+                    "description": "Mark this segment as containing mature content.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "project_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "annotation_source_url",
+                    "description": "A URL representing the transparent PNG annotation overlay.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "latitude",
+                    "description": "The latitude where the segment was created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "The latitude where the segment was created.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "session_id",
+                    "description": "Optional session ID for logging purposes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "annotations",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "c08cd6236516c88c0945b3ffde8dba55",
+            "name": "Get a segment",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}",
+            "description": "Get a work in progress segment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "71d16c6b164c356545406171ab908f06",
+            "name": "Delete a segment",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}",
+            "description": "Delete a work in progress segment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "4dbefb7492a42a1df89ac199794d7272",
+            "name": "Get a segment's reactions",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions",
+            "description": "Get a list of reactions left on a segment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "10995fcba1918aef9b6978116080a073",
+            "name": "React to a segment",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions\/{reactorId}",
+            "description": "React to a segment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "bb697c1521c3a84b85c246bab14d8ef1",
+            "name": "Delete segment reaction",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions\/{reactorId}",
+            "description": "Delete a segment reaction.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "d4389be9da912236970294fe0577d867",
+            "name": "Get segment views",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/views",
+            "description": "Get a list of viewers of a segment. The owner of the segment is not included in the list. This list can only be viewed by the story owner.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "1208cf60e1702c34135c369b0f453ed1",
+            "name": "Create segment view",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/views",
+            "description": "Mark the segment viewed by the authenticated user and increment the segment's view count by one.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "No Name",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "20bceb0733ca26804e6a2cb94cb9091c",
+            "name": "Get a list of segment search filters",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/filters",
+            "description": "Search segments regardless of work in progress affiliation.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "7ebdda68a6ea7ab1fd8760c276d5148d",
+            "name": "Get a list of works in progress",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/list",
+            "description": "Get a list of works in progress.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "list",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start_time",
+                    "description": "The earliest unix timestamp of the works in progress.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The number of projects to return per page.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "The result page number of the results.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "4accfc7a351086b498ff3167c7bbc5f0",
+            "name": "Update a user's public profile",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/editor",
+            "description": "Update a user's public profile.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "first_name",
+                    "description": "The user's first name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "last_name",
+                    "description": "The user's last name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "occupation",
+                    "description": "The user's occupation",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "company",
+                    "description": "The user's company\/employer",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "location_id",
+                    "description": "An ID representing the user's location",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "website",
+                    "description": "The user's website",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "city",
+                    "description": "The user's city of residence",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "state",
+                    "description": "The user's state of residence",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "The user's country of residence",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "4e38bf9a7477da5d0bb4b30132fa1e0d",
+            "name": "Update a user's avatar",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/avatar",
+            "description": "Update a user's avatar.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "source_url",
+                    "description": "Source URL of the image\/video in our temporary S3 bucket. Required for video, audio, and image modules.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        },
+        {
+            "id": "0dd0daaf97654ea94c30bef0ed80d2a6",
+            "name": "Delete a user's avatar",
+            "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/avatar",
+            "description": "Delete a user's avatar.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "rawModeData": ""
+        }
+    ]
+}
