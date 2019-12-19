@@ -1,0 +1,3058 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v1 - Build",
+        "title": "Analytics Services APIs",
+        "description": "These are the Adobe Analytics APIs. To call the endpoints requires access to Adobe Analytics. For Questions: Contact Adobe for support.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/mc.adobe.io\/mc\/analytics\/reporting"
+    ],
+    "paths": {
+        "\/calculatedmetrics": {
+            "get": {
+                "summary": "Retrieves paginated calculated metrics",
+                "description": "A calculated metric response will always include these default items: *id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field:\n\n* *modified*: Date that the metric was last modified (ISO 8601)\n* *definition*: Calculated metric definition as JSON object\n* *compatibility*: Products that the metric is compatible with\n* *reportSuiteName*: Also return the friendly Report Suite name for the RSID\n* *favorite*: True if calculated metric has been m",
+                "operationId": "CalculatedmetricsFindCalculatedMetrics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "expansion",
+                        "in": "query",
+                        "description": "Comma-delimited list of additional calculated metric metadata fields to include on response."
+                    },
+                    {
+                        "name": "includeType",
+                        "in": "query",
+                        "description": "Include additional calculated metrics not owned by user. The \"all\" option takes precedence over \"shared\""
+                    },
+                    {
+                        "name": "rsids",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics tied to specified RSID list (comma-delimited)"
+                    },
+                    {
+                        "name": "dataType",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics compatible with the specified product"
+                    },
+                    {
+                        "name": "ownerId",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics owned by the specified loginId"
+                    },
+                    {
+                        "name": "calculatedMetricFilter",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics in the specified list (comma-delimited list of IDs)"
+                    },
+                    {
+                        "name": "filterByIds",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics in the specified list (comma-delimited list of IDs) (this is the same as calculatedMetricFilter, and is overwritten by calculatedMetricFilter"
+                    },
+                    {
+                        "name": "toBeUsedInRsid",
+                        "in": "query",
+                        "description": "The report suite where the calculated metric intended to be used.  This report suite will be used to determine things like compatibility and permissions.  If it is not specified then the permissions will be calculated based on the union of all metrics authorized in all groups the user belongs to.  If the compatibility expansion is specified and toBeUsedInRsid is not then the compatibility returned is based off the compatibility from the last time the calculated metric was saved."
+                    },
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "Locale"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics that contains the Name"
+                    },
+                    {
+                        "name": "dataGroup",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics with the given dataGroup"
+                    },
+                    {
+                        "name": "tagNames",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics that contains one of the tags"
+                    },
+                    {
+                        "name": "favorite",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics that are favorites"
+                    },
+                    {
+                        "name": "approved",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics that are approved"
+                    },
+                    {
+                        "name": "pagination",
+                        "in": "query",
+                        "description": "return paginated results"
+                    },
+                    {
+                        "name": "filterByModifiedAfter",
+                        "in": "query",
+                        "description": "Filter list to only include calculated metrics modified since this date (ISO8601 format)"
+                    },
+                    {
+                        "name": "includeDeleted",
+                        "in": "query",
+                        "description": "DEPRECATED use deleted includeType - include disabled calculated metrics in results"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of results per page"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number (base 0 - first page is \"0\")"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Creates a new calculated metric",
+                "description": "Creates a new calculated metric. The following attributes are available when creating a calculated metric:\n\nIMPORTANT: Required Fields: name, definition, rsid\n\nOptional fields: description\n\nExample definition for use in testing API below (\"Page exists\"):\n\n```json\n\n{\"definition\":{},\"version\":[1,0,0]}\n```\n\nA calculated metric response will always include these default items:* id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field as defined",
+                "operationId": "CalculatedmetricsCreateCalculatedMetric",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "expansion",
+                        "in": "query",
+                        "description": "Comma-delimited list of additional calculated metric metadata fields to include on response."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AnalyticsCalculatedMetric": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "reportSuiteName": {
+                        "description": "The friendly name for the report suite id.",
+                        "type": "string"
+                    },
+                    "owner": {
+                        "description": "The owner of the calculated metric as an Owner object.",
+                        "type": ""
+                    },
+                    "isDeleted": {
+                        "description": "Whether or not the calculated metric is 'Deleted' (deleted calculated metrics are only returned if requested by id)",
+                        "type": "boolean"
+                    },
+                    "migratedIds": {
+                        "description": "A list of ids that have been migrated from one data center to another. This is the id of the calculated metric in the old data center.  This is an array and can have multiple ids if the calculated metric has been migrated more than once.",
+                        "type": "array"
+                    },
+                    "internal": {
+                        "description": "Whether or not the calculated metric is internal. Internal means that the calculated metric is used by the product but not exposed to the customers",
+                        "type": "boolean"
+                    },
+                    "polarity": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "precision": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "definition": {
+                        "description": "The calculated metric definition as a CalculatedMetricDef object",
+                        "type": ""
+                    },
+                    "compatibility": {
+                        "description": "Analytics products that the calculated metric is compatible with",
+                        "type": ""
+                    },
+                    "legacyId": {
+                        "description": "Legacy calculated metric id from old calculated metric database (only exists if the calculated metric was migrated from the old calculated metric DB)",
+                        "type": "string"
+                    },
+                    "template": {
+                        "description": "Whether or not the calculated metric is a template.  A template is a predefined calculated metric that can be used by all customers and can not be edited",
+                        "type": "boolean"
+                    },
+                    "authorization": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "dataGroup": {
+                        "description": "The data group of the calculated metric",
+                        "type": "string"
+                    },
+                    "siteTitle": {
+                        "description": "A name for the report suite.  This is deprecated and should use the report suite name instead.",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "owner": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "the login id of the owner",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "login": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "migratedIds": {
+                "type": "array"
+            },
+            "definition": {
+                "type": "object"
+            },
+            "compatibility": {
+                "type": "array"
+            },
+            "authorization": {
+                "type": "object"
+            },
+            "tags": {
+                "type": "array"
+            },
+            "shares": {
+                "type": "array"
+            },
+            "usageSummary": {
+                "type": "object"
+            },
+            "AnalyticsDimension": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "support": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "pathable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "parent": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "extraTitleInfo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "segmentable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "reportable": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "fragRelId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dataGroup": {
+                        "description": "The data group of the calculated metric",
+                        "type": "string"
+                    },
+                    "hidden": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "noAccess": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "contentAwareDefault": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    }
+                }
+            },
+            "support": {
+                "type": "array"
+            },
+            "reportable": {
+                "type": "array"
+            },
+            "AnalyticsMetric": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "support": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "allocation": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "precision": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "calculated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "segmentable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "polarity": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dataGroup": {
+                        "description": "The data group of the calculated metric",
+                        "type": "string"
+                    },
+                    "hidden": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "noAccess": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "metricViews": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "contentAwareDefault": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "helpLink": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "warning": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    }
+                }
+            },
+            "metricViews": {
+                "type": "array"
+            },
+            "warning": {
+                "type": "object"
+            },
+            "AnalyticsMetricView": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    }
+                }
+            },
+            "AnalyticsSegmentResponseItem": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "reportSuiteName": {
+                        "description": "The friendly name for the report suite id.",
+                        "type": "string"
+                    },
+                    "owner": {
+                        "description": "The owner of the calculated metric as an Owner object.",
+                        "type": ""
+                    },
+                    "isDeleted": {
+                        "description": "Whether or not the calculated metric is 'Deleted' (deleted calculated metrics are only returned if requested by id)",
+                        "type": "boolean"
+                    },
+                    "migratedIds": {
+                        "description": "A list of ids that have been migrated from one data center to another. This is the id of the calculated metric in the old data center.  This is an array and can have multiple ids if the calculated metric has been migrated more than once.",
+                        "type": "array"
+                    },
+                    "internal": {
+                        "description": "Whether or not the calculated metric is internal. Internal means that the calculated metric is used by the product but not exposed to the customers",
+                        "type": "boolean"
+                    },
+                    "dwInUse": {
+                        "description": "Whether or not the segment currently in use in a Data Warehouse request. A Data Warehouse request is another type of report that clients can run based on their raw data",
+                        "type": "boolean"
+                    },
+                    "asiInUse": {
+                        "description": "Whether or not the segment currently in use in an ASI (old version of VSR) slot.",
+                        "type": "boolean"
+                    },
+                    "aamStatus": {
+                        "description": "AAM\/Raven publishing status (cross-product segment sharing). A segment can be published to AAM, and this flag indicates whether the segment has been published to AAM.",
+                        "type": "object"
+                    },
+                    "definition": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "compatibility": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "legacyId": {
+                        "description": "Legacy calculated metric id from old calculated metric database (only exists if the calculated metric was migrated from the old calculated metric DB)",
+                        "type": "string"
+                    },
+                    "template": {
+                        "description": "Whether or not the calculated metric is a template.  A template is a predefined calculated metric that can be used by all customers and can not be edited",
+                        "type": "boolean"
+                    },
+                    "dataGroup": {
+                        "description": "The data group of the calculated metric",
+                        "type": "string"
+                    },
+                    "virtualReportSuites": {
+                        "description": "A list of all Virtual Report Suites that are using this segment.",
+                        "type": "array"
+                    },
+                    "siteTitle": {
+                        "description": "A name for the report suite.  This is deprecated and should use the report suite name instead.",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "aamStatus": {
+                "type": "object"
+            },
+            "virtualReportSuites": {
+                "type": "array"
+            },
+            "AnalyticsUser": {
+                "type": "object",
+                "properties": {
+                    "companyid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "loginId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "login": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "admin": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "marketingCloudOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "apiKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "changePassword": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "createDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "disabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "adobeStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "fullName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "imsUserId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastLogin": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "legacyApiKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "passwordHash": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tempLoginEnd": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "numberLocalization": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "preferredNumberLocale": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "imsOrgId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "migrationStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "migrationReason": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tenantId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "numberLocalization": {
+                "type": "object",
+                "properties": {
+                    "thousandsSeparator": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "decimalSeparator": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BatchMcEstimatedClusters": {
+                "type": "object",
+                "properties": {
+                    "coopEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "mcAssociation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "estimatedPeople": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "status": {
+                "type": "object"
+            },
+            "mcAssociation": {
+                "type": "object",
+                "properties": {
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "partnerId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "dataSourceId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "createUser": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "createTimestamp": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "imsOrgId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "estimatedPeople": {
+                "type": "object"
+            },
+            "BatchOperationStatus": {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "error": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "error": {
+                "type": "object"
+            },
+            "BulkMigrationObject": {
+                "type": "object",
+                "properties": {
+                    "company": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tag": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "globalToRsid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "shared": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "calc_metrics": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "calc_metrics": {
+                "type": "array"
+            },
+            "CalcMetricCompatibility": {
+                "type": "object",
+                "properties": {
+                    "valid": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "identityMetrics": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "segments": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "functions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "validator_version": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "supported_products": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "supported_schema": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "identityMetrics": {
+                "type": "array"
+            },
+            "segments": {
+                "type": "array"
+            },
+            "functions": {
+                "type": "array"
+            },
+            "supported_products": {
+                "type": "array"
+            },
+            "supported_schema": {
+                "type": "array"
+            },
+            "CalcMetricFunction": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "category": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "persistable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "namespace": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "exampleKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "example": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "definition": {
+                        "description": "The calculated metric definition as a CalculatedMetricDef object",
+                        "type": ""
+                    }
+                }
+            },
+            "CalcMetricFunctionDef": {
+                "type": "object",
+                "properties": {
+                    "func": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parameters": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "formula": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "parameters": {
+                "type": "array"
+            },
+            "formula": {
+                "type": "object"
+            },
+            "version": {
+                "type": "array"
+            },
+            "CalcMetricFunctionParameter": {
+                "type": "object",
+                "properties": {
+                    "func": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "friendlyNameKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "descKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "friendlyName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "default-value": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "default-value": {
+                "type": "object"
+            },
+            "CalculatedMetricAuthorization": {
+                "type": "object",
+                "properties": {
+                    "authorized": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "unAuthorizedMetricIdentities": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "unAuthorizedMetricIdentities": {
+                "type": "array"
+            },
+            "CalculatedMetricDef": {
+                "type": "object",
+                "properties": {
+                    "formula": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "func": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "filters": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "filters": {
+                "type": "array"
+            },
+            "CalendarType": {
+                "type": "object",
+                "properties": {
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "anchorDate": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Column": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "segmentIds": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "segmentIds": {
+                "type": "array"
+            },
+            "DeleteResponse": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DimensionItem": {
+                "type": "object",
+                "properties": {
+                    "dimension": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "itemId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Group": {
+                "type": "object",
+                "properties": {
+                    "layout": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "sections": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "sections": {
+                "type": "array"
+            },
+            "GroupSection": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "removable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "allSelected": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "content": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "content": {
+                "type": "array"
+            },
+            "GroupSectionHolder": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "content": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "GroupSectionItem": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "values": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "values": {
+                "type": "array"
+            },
+            "GroupSectionItemValue": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "included": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "IdentityMetric": {
+                "type": "object",
+                "properties": {
+                    "identity": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dimensionView": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ImsOrgIdsFromRelatedCompanies": {
+                "type": "object",
+                "properties": {
+                    "owningImsOrgId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "relatedImsOrgIds": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "relatedImsOrgIds": {
+                "type": "array"
+            },
+            "JSONObject": {
+                "type": "object"
+            },
+            "JsonNode": {
+                "type": "object",
+                "properties": {
+                    "array": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "null": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "binary": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "float": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "int": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "nodeType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "object": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "long": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "short": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "double": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pojo": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "valueNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "containerNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "missingNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "integralNumber": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "floatingPointNumber": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bigDecimal": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bigInteger": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "textual": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "boolean": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Level": {
+                "type": "object",
+                "properties": {
+                    "levelInt": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "levelStr": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Locale": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "script": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "variant": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "extensionKeys": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "unicodeLocaleAttributes": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "unicodeLocaleKeys": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "iso3Language": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "iso3Country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayLanguage": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayScript": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayCountry": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayVariant": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "extensionKeys": {
+                "type": "array"
+            },
+            "unicodeLocaleAttributes": {
+                "type": "array"
+            },
+            "unicodeLocaleKeys": {
+                "type": "array"
+            },
+            "McAttributionConfig": {
+                "type": "object",
+                "properties": {
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "defaultMetric": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "defaultDimension": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "variables": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "variables": {
+                "type": "array"
+            },
+            "McAttributionVariable": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parent": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "McAudiences": {
+                "type": "object",
+                "properties": {
+                    "mcAssociation": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "mcAssociations": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "McClusterConfiguration": {
+                "type": "object",
+                "properties": {
+                    "dataSourceId": {
+                        "description": "the dpid",
+                        "type": "string"
+                    }
+                }
+            },
+            "McEstimatedClusters": {
+                "type": "object",
+                "properties": {
+                    "coopEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "mcAssociation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "McClusterConfiguration": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "estimatedPeople": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "MetricsWarning": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "text": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "helpLink": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PredictiveSettings": {
+                "type": "object",
+                "properties": {
+                    "trainingPeriods": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Project": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "reportSuiteName": {
+                        "description": "The friendly name for the report suite id.",
+                        "type": "string"
+                    },
+                    "owner": {
+                        "description": "The owner of the calculated metric as an Owner object.",
+                        "type": ""
+                    },
+                    "isDeleted": {
+                        "description": "Whether or not the calculated metric is 'Deleted' (deleted calculated metrics are only returned if requested by id)",
+                        "type": "boolean"
+                    },
+                    "migratedIds": {
+                        "description": "A list of ids that have been migrated from one data center to another. This is the id of the calculated metric in the old data center.  This is an array and can have multiple ids if the calculated metric has been migrated more than once.",
+                        "type": "array"
+                    },
+                    "internal": {
+                        "description": "Whether or not the calculated metric is internal. Internal means that the calculated metric is used by the product but not exposed to the customers",
+                        "type": "boolean"
+                    },
+                    "template": {
+                        "description": "Whether or not the calculated metric is a template.  A template is a predefined calculated metric that can be used by all customers and can not be edited",
+                        "type": "boolean"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "JsonNode": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "definition": {
+                        "description": "The calculated metric definition as a CalculatedMetricDef object",
+                        "type": ""
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    },
+                    "siteTitle": {
+                        "description": "A name for the report suite.  This is deprecated and should use the report suite name instead.",
+                        "type": "string"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ProjectCompatibility": {
+                "type": "object",
+                "properties": {
+                    "valid": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "validatorVersion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "RankedColumnError": {
+                "type": "object",
+                "properties": {
+                    "columnId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "errorId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "errorDescription": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "RankedColumnMetaData": {
+                "type": "object",
+                "properties": {
+                    "dimension": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "columnIds": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "columnErrors": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "dimension": {
+                "type": "object"
+            },
+            "columnIds": {
+                "type": "array"
+            },
+            "columnErrors": {
+                "type": "array"
+            },
+            "RankedReportData": {
+                "type": "object",
+                "properties": {
+                    "totalPages": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "firstPage": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "lastPage": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "numberOfElements": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "number": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "totalElements": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "request": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "reportId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "RankedColumnMetaData": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "columns": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "rows": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "summaryData": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "oberonRequestXML": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "oberonResponseXML": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "predictiveRequestObjects": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "predictiveResponseObjects": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "request": {
+                "type": "object"
+            },
+            "rows": {
+                "type": "array"
+            },
+            "summaryData": {
+                "type": "object"
+            },
+            "oberonRequestXML": {
+                "type": "array"
+            },
+            "oberonResponseXML": {
+                "type": "array"
+            },
+            "predictiveRequestObjects": {
+                "type": "array"
+            },
+            "predictiveResponseObjects": {
+                "type": "array"
+            },
+            "RankedRequest": {
+                "type": "object",
+                "properties": {
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "dimension": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Locale": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "locale": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "globalFilters": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "search": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "settings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "statistics": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "metricContainer": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "PredictiveSettings": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "globalPredictiveSettings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "anchorDate": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "globalFilters": {
+                "type": "array"
+            },
+            "search": {
+                "type": "object"
+            },
+            "settings": {
+                "type": "object"
+            },
+            "statistics": {
+                "type": "object"
+            },
+            "metricContainer": {
+                "type": "object"
+            },
+            "RankedSettings": {
+                "type": "object",
+                "properties": {
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "page": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "dimensionSort": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "countRepeatInstances": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "dataSourceTypes": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "reflectRequest": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "suiteReportingContext": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "includeAnomalyDetection": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "includePercentChange": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "dataSourceTypes": {
+                "type": "array"
+            },
+            "RankedStatistics": {
+                "type": "object",
+                "properties": {
+                    "functions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ignoreZeroes": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "RankedSummaryData": {
+                "type": "object",
+                "properties": {
+                    "summaryData": {
+                        "description": "Reference",
+                        "type": "object"
+                    }
+                }
+            },
+            "RelatedCompany": {
+                "type": "object",
+                "properties": {
+                    "companyid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    }
+                }
+            },
+            "ReportDimension": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ReportFilter": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dimension": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "itemId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "segmentId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "segmentDefinition": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "dateRange": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "excludeItemIds": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "segmentDefinition": {
+                "type": "object"
+            },
+            "excludeItemIds": {
+                "type": "array"
+            },
+            "ReportMetric": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "columnId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "allocationType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "filters": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "sort": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "metricDefinition": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "metricView": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "predictive": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "metricDefinition": {
+                "type": "object"
+            },
+            "predictive": {
+                "type": "object"
+            },
+            "ReportMetricPredictiveSettings": {
+                "type": "object",
+                "properties": {
+                    "anomalyConfidence": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ReportMetrics": {
+                "type": "object",
+                "properties": {
+                    "metricFilters": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "metrics": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "metricFilters": {
+                "type": "array"
+            },
+            "metrics": {
+                "type": "array"
+            },
+            "ReportSearch": {
+                "type": "object",
+                "properties": {
+                    "clause": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "excludeItemIds": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "itemIds": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "includeSearchTotal": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "empty": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "itemIds": {
+                "type": "array"
+            },
+            "ReportSuite": {
+                "type": "object",
+                "properties": {
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "reportSuiteName": {
+                        "description": "The friendly name for the report suite id.",
+                        "type": "string"
+                    },
+                    "numericRsid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "baseUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "defaultPage": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "calendarAnchorDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organization": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "companyid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "billingCustomerId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "timezone": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "timezoneZoneinfo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "signedUpDate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastModified": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "signedUpOurTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "saveAamIdValues": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "references": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "CalendarType": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "calendarType": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "axleConfig": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "tntConfig": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "ipObfuscationEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "currentTimezoneOffset": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "numGroups": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "isBlocked": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "discoverUiEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "mcAssociation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "McAudiences": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "mcAudiences": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "McEstimatedClusters": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "mcEstimatedClusters": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "ImsOrgIdsFromRelatedCompanies": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "imsOrgIdsFromRelatedCompanies": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "relatedCompanies": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "dataCurrentAsOf": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "enabledSolutions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "parentRsid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "isDeleted": {
+                        "description": "Whether or not the calculated metric is 'Deleted' (deleted calculated metrics are only returned if requested by id)",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "references": {
+                "type": "object"
+            },
+            "axleConfig": {
+                "type": "object"
+            },
+            "tntConfig": {
+                "type": "object",
+                "properties": {
+                    "tnt": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "tntExpireType": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tntExpirePeriods": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tntAllocationType": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "tntA4tDateEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "tntClientCode": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "relatedCompanies": {
+                "type": "array"
+            },
+            "enabledSolutions": {
+                "type": "array"
+            },
+            "ReportSuiteAxleConfig": {
+                "type": "object",
+                "properties": {
+                    "axleData": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "axleStart": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ReportSuiteHateoasReferences": {
+                "type": "object",
+                "properties": {
+                    "companyUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "billingCustomerUrl": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Response": {
+                "type": "object",
+                "properties": {
+                    "entity": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "metadata": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "entity": {
+                "type": "object"
+            },
+            "metadata": {
+                "type": "object"
+            },
+            "Row": {
+                "type": "object",
+                "properties": {
+                    "itemId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "dataExpected": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "dataUpperBound": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "dataLowerBound": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "dataAnomalyDetected": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "percentChange": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "data": {
+                "type": "array"
+            },
+            "dataExpected": {
+                "type": "array"
+            },
+            "dataUpperBound": {
+                "type": "array"
+            },
+            "dataLowerBound": {
+                "type": "array"
+            },
+            "dataAnomalyDetected": {
+                "type": "array"
+            },
+            "percentChange": {
+                "type": "array"
+            },
+            "RowItem": {
+                "type": "object",
+                "properties": {
+                    "itemId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "SegmentCompatibility": {
+                "type": "object",
+                "properties": {
+                    "valid": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "validator_version": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "supported_products": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "supported_schema": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "supported_features": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "supported_features": {
+                "type": "array"
+            },
+            "SegmentPublishingConfig": {
+                "type": "object",
+                "properties": {
+                    "dataSourceId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "traitFolderId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "segmentFolderId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "aamAccessToken": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "SegmentSummaryResponse": {
+                "type": "object",
+                "properties": {
+                    "report": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "compatibility": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "supportedEngines": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "detailMsg": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "oberonRequestXml": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "oberonResponseXml": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "report": {
+                "type": "object"
+            },
+            "supportedEngines": {
+                "type": "array"
+            },
+            "ServiceError": {
+                "type": "object",
+                "properties": {
+                    "statusCode": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Level": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "logLevel": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "errorCode": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ServiceErrorStatus": {
+                "type": "object",
+                "properties": {
+                    "errorCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "errorDescription": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "errorId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ServiceException": {
+                "type": "object",
+                "properties": {
+                    "cause": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "stackTrace": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Response": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "response": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "ServiceError": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "error": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "errorDescription": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ServiceErrorStatus": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "serviceErrorStatus": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "localizedMessage": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "suppressed": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "cause": {
+                "type": "object"
+            },
+            "stackTrace": {
+                "type": "array"
+            },
+            "suppressed": {
+                "type": "array"
+            },
+            "Share": {
+                "type": "object",
+                "properties": {
+                    "shareId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "shareToId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "shareToType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "componentType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "componentId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "shareToDisplayName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "shareToLogin": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "StackTraceElement": {
+                "type": "object",
+                "properties": {
+                    "methodName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "fileName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lineNumber": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "className": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "nativeMethod": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "SummarizedUsageItem": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "mostRecentTimestamp": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "itemId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "relevancyScore": {
+                        "description": "",
+                        "type": "number"
+                    }
+                }
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "the login id of the owner",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "components": {
+                        "description": "the list of components that have been tagged with this tag",
+                        "type": "array"
+                    }
+                }
+            },
+            "components": {
+                "type": "array"
+            },
+            "TaggedComponent": {
+                "type": "object",
+                "properties": {
+                    "componentType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "componentId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    }
+                }
+            },
+            "Throwable": {
+                "type": "object",
+                "properties": {
+                    "Throwable": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "cause": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "stackTrace": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "localizedMessage": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "suppressed": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "TotalsReportData": {
+                "type": "object",
+                "properties": {
+                    "reportId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "columns": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "totals": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "columns": {
+                "type": "array"
+            },
+            "totals": {
+                "type": "array"
+            },
+            "UnhashReportData": {
+                "type": "object",
+                "properties": {
+                    "totalPages": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "firstPage": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "lastPage": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "numberOfElements": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "number": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "totalElements": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "reportId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "searchAnd": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "searchOr": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "searchNot": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "searchPhrase": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rows": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "oberonRequestXml": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "oberonResponseXml": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserGroup": {
+                "type": "object",
+                "properties": {
+                    "companyid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "groupId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "rsids": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "tokens": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "loginIds": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "imsPlcId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "rsids": {
+                "type": "array"
+            },
+            "tokens": {
+                "type": "array"
+            },
+            "loginIds": {
+                "type": "array"
+            },
+            "VirtualReportSuite": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Id of the calculated metric.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "A name for the calculated metric.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "A description of the calculated metric.",
+                        "type": "string"
+                    },
+                    "rsid": {
+                        "description": "The report suite id.",
+                        "type": "string"
+                    },
+                    "reportSuiteName": {
+                        "description": "The friendly name for the report suite id.",
+                        "type": "string"
+                    },
+                    "owner": {
+                        "description": "The owner of the calculated metric as an Owner object.",
+                        "type": ""
+                    },
+                    "isDeleted": {
+                        "description": "Whether or not the calculated metric is 'Deleted' (deleted calculated metrics are only returned if requested by id)",
+                        "type": "boolean"
+                    },
+                    "migratedIds": {
+                        "description": "A list of ids that have been migrated from one data center to another. This is the id of the calculated metric in the old data center.  This is an array and can have multiple ids if the calculated metric has been migrated more than once.",
+                        "type": "array"
+                    },
+                    "internal": {
+                        "description": "Whether or not the calculated metric is internal. Internal means that the calculated metric is used by the product but not exposed to the customers",
+                        "type": "boolean"
+                    },
+                    "parentRsid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parentRsidName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "timezone": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "segmentList": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "globalCompanyKey": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "numGroups": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "groups": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "currency": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "CalendarType": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "calendarType": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "ReportSuiteAxleConfig": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "axleConfig": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "currentTimezoneOffset": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "timezoneZoneinfo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "dataCurrentAsOf": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "discoverUiEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "enabledSolutions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "numericRsid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "isBlocked": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "tags": {
+                        "description": "All existing tags associated with the calculated metric.",
+                        "type": "array"
+                    },
+                    "shares": {
+                        "description": "Existing shares for the calculated metric.",
+                        "type": "array"
+                    },
+                    "approved": {
+                        "description": "Whether or not the calculated metric has been marked approved.",
+                        "type": "boolean"
+                    },
+                    "favorite": {
+                        "description": "Whether or not the calculated metric has been marked as a favorite.",
+                        "type": "boolean"
+                    },
+                    "SummarizedUsageItem": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "usageSummary": {
+                        "description": "How frequently the user uses this calculated metric.",
+                        "type": ""
+                    },
+                    "siteTitle": {
+                        "description": "A name for the report suite.  This is deprecated and should use the report suite name instead.",
+                        "type": "string"
+                    },
+                    "modified": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "segmentList": {
+                "type": "array"
+            },
+            "groups": {
+                "type": "array"
+            },
+            "expansion": {
+                "type": "array"
+            },
+            "includeType": {
+                "type": "array"
+            }
+        }
+    }
+}
