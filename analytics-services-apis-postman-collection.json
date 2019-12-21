@@ -1,5 +1,5 @@
 {
-    "id": "7c2cc7885d5bfda724f80c7b2df78ed9",
+    "id": "cf3b89c14ecf348b9ce9f147ca92f3b6",
     "name": "Analytics Services APIs",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "25ae90441ca19561811ac7722ff78b8a",
+            "id": "c73c537b80feab7829da20a7db2a92c0",
             "name": "Retrieves paginated calculated metrics",
             "url": "http:\/\/mc.adobe.io\/mc\/analytics\/reporting\/calculatedmetrics",
             "description": "A calculated metric response will always include these default items: *id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field:\n\n* *modified*: Date that the metric was last modified (ISO 8601)\n* *definition*: Calculated metric definition as JSON object\n* *compatibility*: Products that the metric is compatible with\n* *reportSuiteName*: Also return the friendly Report Suite name for the RSID\n* *favorite*: True if calculated metric has been m",
@@ -163,11 +163,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7c2cc7885d5bfda724f80c7b2df78ed9",
+            "collectionId": "cf3b89c14ecf348b9ce9f147ca92f3b6",
             "rawModeData": ""
         },
         {
-            "id": "44da2599ef89dba4192ee179e1aef179",
+            "id": "93266df945e989c30da8d5f02e519575",
             "name": "Creates a new calculated metric",
             "url": "http:\/\/mc.adobe.io\/mc\/analytics\/reporting\/calculatedmetrics",
             "description": "Creates a new calculated metric. The following attributes are available when creating a calculated metric:\n\nIMPORTANT: Required Fields: name, definition, rsid\n\nOptional fields: description\n\nExample definition for use in testing API below (\"Page exists\"):\n\n```json\n\n{\"definition\":{},\"version\":[1,0,0]}\n```\n\nA calculated metric response will always include these default items:* id, name, description, rsid, owner* \n\nOther attributes can be optionally requested through the 'expansion' field as defined",
@@ -194,7 +194,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7c2cc7885d5bfda724f80c7b2df78ed9",
+            "collectionId": "cf3b89c14ecf348b9ce9f147ca92f3b6",
             "rawModeData": ""
         }
     ]
