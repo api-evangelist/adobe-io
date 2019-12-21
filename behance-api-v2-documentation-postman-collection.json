@@ -1,5 +1,5 @@
 {
-    "id": "22a6df2eb1a6ccbba3d2716265d43b51",
+    "id": "36c33895077b40c3f205f71101807626",
     "name": "Behance API V2 Documentation",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "17d104988aabd0b0a17298d5e6cdc1a2",
+            "id": "1aa2c864b0f92bba3331861cb57d8cd0",
             "name": "Get a user's activity feed",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/activity",
             "description": "Get the authenticated user's activity feed.",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e6537cfb0c96113e4c4e0a5872ecf749",
+            "id": "4cb6e9327295cc8f84fdb4d477ee93b1",
             "name": "Get a user's feed by timestamp",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/activity\/since",
             "description": "Get the authenticated user's activity feed from the specified timestamp forward.",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "fce2a1d69ac1660125aba2b96f328085",
+            "id": "8e4ff488a235c1eee5f66bb47a1b9249",
             "name": "Get membership status",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
             "description": "Get membership status of the authenticated user.",
@@ -91,11 +91,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "48ce4a3dc298c40d7796f03268930275",
+            "id": "5267c7d72a22e0a0d5481867f2e9e6f0",
             "name": "Add a new CCN member",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
             "description": "Add the authenticated user to the CCN.",
@@ -122,11 +122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "78748cee266a3e61ce44a9aa0e8bd39f",
+            "id": "f984cd5656a05152d1f7c151d4125286",
             "name": "Delete a CCN membership",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/ccn\/{networkId}\/member",
             "description": "Remove the authenticated user from the CCN.",
@@ -153,11 +153,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ae030e512ec3ae53ac3cf15a697e4fd5",
+            "id": "b86ca865f85879366e06b08775ab4b5b",
             "name": "Search and filter collections",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections",
             "description": "Search and filter collections.",
@@ -176,11 +176,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "465d1d0c8be221c534e3b2d2e136c412",
+            "id": "d22e5743fb79e0ab347a53fc27a5c43b",
             "name": "Create a collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections",
             "description": "Create a collection of projects.",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "1a939f1ca89d5f31b6343d03beb112ef",
+            "id": "19f27c59f58b5c9e8ad6f70dd5683dd9",
             "name": "Get a single collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
             "description": "Get a single collection.",
@@ -245,11 +245,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d6039a27fcab011be2866398ef75d42d",
+            "id": "05d0984118f3c0d9eda1957df4d82a41",
             "name": "Update a collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
             "description": "Update a collection.",
@@ -290,11 +290,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "743f793a1c442ff7eac3efa604dd8e32",
+            "id": "07392d25f79f4564260c7d0bcd95f5ca",
             "name": "Delete a collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}",
             "description": "Delete a collection.",
@@ -321,11 +321,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c72cfe758a85c638de847f16aec6af6e",
+            "id": "da7036c09277e30f74e136780ca9288d",
             "name": "List projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects",
             "description": "List projects belonging to the specified collection.",
@@ -352,11 +352,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e9236f6b70e28d8fa8cf3b9b889c2bc5",
+            "id": "a848616fae1eaec652880313e1e115e5",
             "name": "Add projects to a collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects",
             "description": "Add projects to a collection.",
@@ -390,11 +390,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "a9719795eac72ad02cc5b58850288f5e",
+            "id": "86776fb79d8cbe33e44400e8cd8576e4",
             "name": "Remove project from collection",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/projects\/{projectId}",
             "description": "Remove a project from a collection.",
@@ -421,11 +421,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "230b7b7da1fa23483b7125fb00c546c5",
+            "id": "9236d04ee29f870154632d5c48fe4e67",
             "name": "List owners",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners",
             "description": "List the owners of the collection.",
@@ -452,11 +452,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "adc080718ad0f6c1252a89896673fae8",
+            "id": "9c6e7f2236065480c7887d829173b088",
             "name": "Add an owner",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners",
             "description": "Add an owner to the collection.",
@@ -490,11 +490,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "8a7a9258471bf509aec368402569f6fd",
+            "id": "0bd17208ae626d6fb7d47e13b19bd239",
             "name": "Remove an owner",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/collections\/{collectionId}\/coowners\/{userId}",
             "description": "Remove an owner from the collection.",
@@ -521,11 +521,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "70b346bf6adc87239148cbd53aeed622",
+            "id": "1977a7343c6385b651cffbe3db211a0a",
             "name": "Get a list of top users",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/creativestofollow",
             "description": "Get a list of top users.",
@@ -544,11 +544,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "70eba8563b8d08a15f689f101f734a44",
+            "id": "45a60af2912e19d9612fba9a3b95fbe6",
             "name": "Get creative fields",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/fields",
             "description": "Retrieve a full list of creative fields.",
@@ -567,11 +567,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "6a807a73122ffba7c9dd16b374ebd07f",
+            "id": "9273f9b7a3531fea1f8c2d20c1ae8b6f",
             "name": "Get recommended projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/foryou\/projects",
             "description": "Get recommended projects for the authenticated user.",
@@ -640,11 +640,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "f4c3241566751eedb972f706229cb49d",
+            "id": "a2bdb4b605832aa76344c44e05188bc6",
             "name": "List galleries",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries",
             "description": "List galleries.",
@@ -663,11 +663,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ddcaa59f227629c2e59211ccf03e5e2e",
+            "id": "27a1ba2fdb4d7bd16533e14bb43f525e",
             "name": "Get a single gallery",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}",
             "description": "Get a single gallery.",
@@ -694,11 +694,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "4f950fdea7c6208a94502f6e94af6173",
+            "id": "1e935a1f641a5705a11745503b7ea200",
             "name": "Follow a gallery",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}\/follow",
             "description": "Follow a gallery on behalf of the authenticated user.",
@@ -725,11 +725,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c2c079f6f4bd2052355ff1284f62f259",
+            "id": "f0a0b73e145dc508b0bf515b97731baa",
             "name": "Unfollow a gallery",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/galleries\/{galleryId}\/follow",
             "description": "Unfollow a gallery on behalf of the authenticated user.",
@@ -756,11 +756,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "11eacb4f02b9d836fe54acee41c49207",
+            "id": "9b060c16caf295e4ca329d0cdd14efaf",
             "name": "Get a list of countries",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/countries",
             "description": "Get a list of countries.",
@@ -779,11 +779,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c7438aca8aa38a33bb86a93fe13aab81",
+            "id": "057540eba890eb857a266ceee62de0ef",
             "name": "Get a list of regions",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/regions",
             "description": "Get a list of regions.",
@@ -810,11 +810,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "3ed892e33263c711e89c151ce894289f",
+            "id": "828eb23b044380239ee1cfc85f45d75e",
             "name": "Get a list of cities",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/locations\/cities",
             "description": "Get a list of cities.",
@@ -855,11 +855,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d67ed283259f401680b68d5ce5451ce2",
+            "id": "dd0c20c2b8dd9684e4647348bea0de57",
             "name": "Get live video subscription status",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
             "description": "Get subscription status for upcoming live video notifications.",
@@ -878,11 +878,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "af27288b4fda2b17f9bea35526198469",
+            "id": "4d6ecef8a99e486c9dbd946c1f46b4d2",
             "name": "Subscribe to live video notifications",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
             "description": "Subscribe to live video notifications on behalf of the authenticated user.",
@@ -901,11 +901,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e8a7388549af7ad18337fbf04b5a40e9",
+            "id": "56c7dda8fd9cf6e323c50123955f9ec0",
             "name": "Unsubscribe from live video notifications",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/notifications",
             "description": "Unsubscribe from live video notifications on behalf of the authenticated user.",
@@ -924,11 +924,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "75db03131c00926d734418d2aa6fce0f",
+            "id": "f6103496cee6b382f3292cc0ab5912d5",
             "name": "Get live videos",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/videos",
             "description": "Get a list of live videos.",
@@ -962,11 +962,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "4053ae7b993fd9d8b72d2e5ab9ae052f",
+            "id": "07ad1464f4d22ed9405f7131ee4fdc50",
             "name": "Get live video replays",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/replays",
             "description": "Get a list of live video replays.",
@@ -1014,11 +1014,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7c9fb7b4ee4e5c8e10ea339925b52c5c",
+            "id": "c6ae45a12d55f4f47eea30056041ebb0",
             "name": "Get a live video",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/live\/video\/{videoId}",
             "description": "Get a live video.",
@@ -1045,11 +1045,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c49ab6657664434c06c35fc9120212c1",
+            "id": "0373ec09948763e1058a935bc9608ef8",
             "name": "Get notifications",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications",
             "description": "Get notifications for the authenticated user.",
@@ -1068,11 +1068,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "14fe1bb9774d0b84bf9375c0eb051e77",
+            "id": "74b73d882573053b0f59d550e7bfaef9",
             "name": "Get notification count",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/count",
             "description": "Get the total number of unread notifications for the authenticated user.",
@@ -1091,11 +1091,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "db602e31f1180a8539dcc3a01b193e7c",
+            "id": "f7e1f22bb2abe6a41bac7ffc1fc5e40b",
             "name": "Get a single notification",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/{notificationId}",
             "description": "Get a single notification.",
@@ -1122,11 +1122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ffccf16548411a0b12c77ed31883bc3f",
+            "id": "e885b2e5f74e787f4f5751d13afdc912",
             "name": "Get project comment notifications",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/projects\/{projectId}\/comments",
             "description": "Get a list of project comment notifications for the specified project.",
@@ -1153,11 +1153,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "02ca6ff083e854440edab14662dd7a77",
+            "id": "0d5ddb5da86cd52c90b9387750c097db",
             "name": "Get project comment notification count",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/projects\/{projectId}\/comments\/count",
             "description": "Get the total number of unread comment notifications for the specified project.",
@@ -1184,11 +1184,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e685fbe906561536ed1849be3b1959f5",
+            "id": "c0553daa876eb330b2c87f14656a332d",
             "name": "Get invitation notifications",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations",
             "description": "Get invitation notifications for the authenticated user.",
@@ -1207,11 +1207,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "72b69d07debead81fb30a6b67f896ffc",
+            "id": "0bd3b9892f1d86c9895584e951827be2",
             "name": "Accept an invitation",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations\/{invitationId}",
             "description": "Accept an invitation on behalf of the authenticated user.",
@@ -1238,11 +1238,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "89bd5fb8cb201d64c1690376996bc9c1",
+            "id": "ca0197889e984b4ccc9b0eb973c6448d",
             "name": "Decline an invitation",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/notifications\/invitations\/{invitationId}",
             "description": "Decline an invitation on behalf of the authenticated user.",
@@ -1269,11 +1269,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d68ce67126255603d937f80210f2f634",
+            "id": "9bc377c67ee6e9be830dc4d29186a040",
             "name": "Complete onboarding",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/onboarding",
             "description": "Complete onboarding on behalf of the authenticated user.",
@@ -1300,11 +1300,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "dbd47e1ff5ca633953589fc9eed7db66",
+            "id": "6653d63683fafce5b144fccd84b64c7b",
             "name": "Create a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor",
             "description": "Create a project.",
@@ -1436,11 +1436,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "8b77f7d0440710ac43db397526a8d370",
+            "id": "7c06eb40e58385cc25d63ddc866b29ce",
             "name": "Modify a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}",
             "description": "Modify a project.",
@@ -1579,11 +1579,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "391d97814e57bdf073334ad3a29602ca",
+            "id": "10fe07bd7d3bf633a44896990f2f22bf",
             "name": "Clone an existing project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/clone",
             "description": "Clone an existing project.",
@@ -1610,11 +1610,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "eb25f6f65a8846aa8912f5db2fe41046",
+            "id": "797291fba9efa86978ff27c0fb850dbf",
             "name": "Reposition a project in the user's portfolio",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/reorder",
             "description": "Moves the position of the project in the user's portfolio, relative to another project.",
@@ -1648,11 +1648,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "dd16ac8463674f5fe9302755e265aee4",
+            "id": "184afe403f1aa36d779ab6159ddf9770",
             "name": "Create a new project module",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules",
             "description": "Create a new project module.",
@@ -1742,11 +1742,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "a5cbf1d8cec5df835e1d0a95ed50ec4c",
+            "id": "025876184500e2076c48ec3fccceee28",
             "name": "Modify a project module",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules\/{moduleId}",
             "description": "Modify a project module.",
@@ -1836,11 +1836,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "543605f898a1d49b805f6679d48c348d",
+            "id": "421cf5ab6db577dd0c8372b58a24e42c",
             "name": "Delete a project module",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/{projectId}\/modules\/{moduleId}",
             "description": "Delete a project module.",
@@ -1867,11 +1867,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "cf20dc3bc58f7b3861d82a58a545b73e",
+            "id": "9d7c4f18f72e7d735807291d6ecc5da7",
             "name": "Generate a signed S3 URL",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_request",
             "description": "Generates a signed URL and object key with which a client can upload binary data to our temporary S3 bucket. Data lives in this bucket for up to 24 hours.",
@@ -1898,11 +1898,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "0f083dcea5c0d06a644fbb56d7cd3d7f",
+            "id": "ce91a8e974e38a3eb01bdc7b2f4e690c",
             "name": "Intitiate a multipart upload.",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/initiate",
             "description": "Initiate a multipart upload. This is the first step of the multipart upload flow.",
@@ -1929,11 +1929,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "693238ee3746368ae32828508359c67c",
+            "id": "24064b028aff225bbed92deb19c0ef24",
             "name": "Generate a presigned multipart S3 URL",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/upload",
             "description": "Generate a presigned multipart S3 URL.",
@@ -1967,11 +1967,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "8b3da91efd9eeb8731bbf8801f298acc",
+            "id": "58711cddedb0f2ec9f7b176f1168cfc0",
             "name": "Complete a multipart upload",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/complete",
             "description": "Completes a multipart upload after all parts have been uploaded.",
@@ -1998,11 +1998,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "77bc97eded88e1789d8ed48bcb765bee",
+            "id": "dc973c48e5f590fe8cfeaa148ead1aab",
             "name": "Abort an in progress multipart upload",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/project\/editor\/auto_sign_multipart\/abort",
             "description": "Abort an in progress multipart upload.",
@@ -2029,11 +2029,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "9b6af1050f3486ef70eb132129bd54e0",
+            "id": "db88d5b3b26b4ea733c3d9a2ee18ff03",
             "name": "Search and filter projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects",
             "description": "Search and filter projects.",
@@ -2052,11 +2052,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "653aafafc77155e1b747337544713c5f",
+            "id": "695ceba9405193c710623b8a872bfe1c",
             "name": "Get project drafts",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/drafts",
             "description": "Get project drafts for the authenticated user.",
@@ -2075,11 +2075,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "255f66afab04320e2251a57ea9b99583",
+            "id": "dd0621b32ace6ef3cd27b68e9aa33306",
             "name": "Get a single project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}",
             "description": "Get a single project.",
@@ -2106,11 +2106,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d6d1324f4b503b30bd36003307dfd723",
+            "id": "149b02ed0b2e81de587358f29a1a3112",
             "name": "Get project comments",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/comments",
             "description": "Get the comments associated with a specific project.",
@@ -2137,11 +2137,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "19f53fad7c98f11df0a8c81c4f49a996",
+            "id": "738e0ec9f1cd9b7d937181b1b7f4fa6d",
             "name": "Get project collections",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/collections",
             "description": "Get the collections associated with a specific project.",
@@ -2168,11 +2168,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c0bc4efec78c3958aad9dd215b077d1d",
+            "id": "35680ccb34d98cfb40e2aa6c1201ce4e",
             "name": "View a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/view",
             "description": "View a project on behalf of the authenticated user.",
@@ -2199,11 +2199,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7b6eeb5650171a8ea923c440a99f607d",
+            "id": "29b3373b3e8ff16358adc02e74684a63",
             "name": "Appreciate a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/appreciate",
             "description": "Appreciate a project on behalf of the authenticated user.",
@@ -2230,11 +2230,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "667e5cdb4ef3ea7a540e6e9ea0c060f9",
+            "id": "f59e6fbd5437c38382bcdf27bb41ae5f",
             "name": "Unappreciate a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/appreciate",
             "description": "Unappreciate a project on behalf of the authenticated user.",
@@ -2261,11 +2261,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "62bdf62c71404a4a330b7430994df973",
+            "id": "04bba3955cf8fe3845ef675a16d51d93",
             "name": "Delete a project credit",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/projects\/{projectId}\/credits\/{userId}",
             "description": "Remove a credited user from a project.",
@@ -2292,11 +2292,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "16c9a8cc8ca46caddb0e708d93a06ce2",
+            "id": "40156c8c598fae490a0b503771d07dfd",
             "name": "Report an entity",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/report\/{entityType}\/{entityId}",
             "description": "Report an entity as spam to be reviewed by the moderation team.",
@@ -2351,11 +2351,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "68fa8fe2ee7b0c12af2031168872153c",
+            "id": "5f58544ad1de02ebd9542790e02fb517",
             "name": "Get user browser settings",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/settings\/browsing",
             "description": "Get the authenticated user's browser settings.",
@@ -2374,11 +2374,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "a9cf38dda660ad0b885952a93738b567",
+            "id": "11f1f1f6a1e41817056ee0dd49e70da4",
             "name": "Modify user browser settings",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/settings\/browsing",
             "description": "Modify the authenticated user's browser settings.",
@@ -2405,11 +2405,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "81e76c7611180d24fecaf6510766ec42",
+            "id": "ad53304490a3ab7b8940920625ff618b",
             "name": "Search for tags",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/tags",
             "description": "Search for tags.",
@@ -2436,11 +2436,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ffaf53e678c13c573aaf501ecce984a4",
+            "id": "8b2dacd7d57bec5a1f213d11ef49598f",
             "name": "Create a tag",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/tags",
             "description": "Create a tag.",
@@ -2474,11 +2474,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "15da4b3e2dd51a5520b3b72441f0c29b",
+            "id": "8ed1fb7002b82faf335a3303881ac910",
             "name": "Get talent provisioning",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/provisions",
             "description": "Retrieve the talent provisioning level for the authenticated user.",
@@ -2497,11 +2497,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "597a31e02c36d05f39f6ca97edaef17c",
+            "id": "4fb82d7712b18e4bdbbc76fc2517bd2d",
             "name": "Get job searches",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs",
             "description": "Retrieve the job searches owned by the authenticated user.",
@@ -2520,11 +2520,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "777ad86b07c601fa22ddfb08a8821485",
+            "id": "2f0c40c092dc64aa0820afefb14588af",
             "name": "Get job listing",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/details",
             "description": "Get a single job listing.",
@@ -2543,11 +2543,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "62137897fe6ac1fc2d6e531955891b3d",
+            "id": "0a939eb35b9d38fd79d52e358555aced",
             "name": "Get a list of candidates",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/candidates",
             "description": "Get a list of candidates for the specified job listing.",
@@ -2566,11 +2566,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ccded97b7b9745f203276ac3f7211c0a",
+            "id": "fb402c0c8c9f51e12f71cb2d2ccafaba",
             "name": "Get candidate recommendations",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/talent\/jobs\/{jobId}\/recommendations",
             "description": "Get a list of recommended candidates.",
@@ -2589,11 +2589,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "163b1a2417523c0ea49a12fdf3c11327",
+            "id": "b1c8ec39b5141fc21f07f286e5be1bc2",
             "name": "Search and filter teams",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams",
             "description": "Search and filter teams.",
@@ -2648,11 +2648,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "26236a3936ffa218b696b8995ce97fe9",
+            "id": "78d58a0a6bd2f0615f2f6856270bc77e",
             "name": "Create a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams",
             "description": "Create a team.",
@@ -2679,11 +2679,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "b4ded850a932fb6c0cd75787b9aa9e83",
+            "id": "2fd2f2b0f7baaeba35a0cdd128c7a575",
             "name": "Get a single team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
             "description": "Get a single team.",
@@ -2710,11 +2710,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "fd4735dd25b571eee516c2c808f05e6a",
+            "id": "9d8e41e8f841d6497fd1e0ab1b2c455f",
             "name": "Delete a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
             "description": "Delete a team.",
@@ -2741,11 +2741,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "73c05438d5b9bc371e92507dc4ccdde8",
+            "id": "4c860940a045c93b31dedb4b37c135c4",
             "name": "Update a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}",
             "description": "Update a team.",
@@ -2772,11 +2772,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "017ad59a12915d85db7200122c3116b7",
+            "id": "2e420d11a1c5147ff42613cbb3c72425",
             "name": "Increment view count",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/view",
             "description": "Increment the view count for the specified team by one.",
@@ -2803,11 +2803,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "f0fe3a4aa53f18298922f7c6756367a1",
+            "id": "596a1d11069d4bf22e462aebeb700e25",
             "name": "Get projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/member_projects",
             "description": "Get projects belonging to the specified team.",
@@ -2834,11 +2834,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "f36940c952b155c39b0852800f283cd8",
+            "id": "e568711e15d77e03af178c37ff9b0cfb",
             "name": "Get team members",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members",
             "description": "Get a list of all members in a team.",
@@ -2865,11 +2865,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "5919e3c450055c1fece238d711522f06",
+            "id": "dcffc12beec873aa5536cd678c0c1148",
             "name": "Add team members",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members",
             "description": "Add members to a team with a role.",
@@ -2903,11 +2903,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "2a9b0ad93b510794b68e472005342f3e",
+            "id": "970455e53dd6414ea73876720954b687",
             "name": "Delete a team member",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members\/{userId}",
             "description": "Delete a team member",
@@ -2934,11 +2934,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c76c64baece78cc1598fa1964e954fbc",
+            "id": "d5831fa9b0ecfd9f39819678f6b8a5b4",
             "name": "Modify a team member",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/members\/{userId}",
             "description": "Modify a team member's role or position in the member list.",
@@ -2972,11 +2972,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "fad3db8f0c173ff06e9fad360675a24a",
+            "id": "e3617d70b559cc55157017f06567b2e9",
             "name": "Get team followers",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
             "description": "Get a list of all followers of a team.",
@@ -3003,11 +3003,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "45a747044cb1c9be51cc59eff4fc2b1d",
+            "id": "a6a781e8dd09115ee3ce50c33073e1bc",
             "name": "Follow a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
             "description": "Follow a team on behalf of the authenticated user.",
@@ -3034,11 +3034,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "8ca91cfc31e375c9ebec812595665de2",
+            "id": "24379733f89f15488cca07daa75eedc8",
             "name": "Unfollow a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/followers",
             "description": "Unfollow a team on behalf of the authenticated user.",
@@ -3065,11 +3065,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "aff942f3285f4b91a0c8f35287da0d94",
+            "id": "fb6a7e124d44212369486cc9842942fe",
             "name": "Get team projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/projects",
             "description": "Get a list of team projects.",
@@ -3103,11 +3103,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "f30d117557eb1f514f5a053530d57ae7",
+            "id": "8db42bf641336d476dbe8c996a06c804",
             "name": "Add project(s) to a team",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/projects",
             "description": "Add one or more projects to a team",
@@ -3141,11 +3141,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "eff2522efaa211638dc770191abae3e5",
+            "id": "191d40f31f41b8255822577f1f171b07",
             "name": "Remove a project",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/teams\/{teamId}\/project\/{projectId}",
             "description": "Remove a project from the team.",
@@ -3172,11 +3172,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e6c2941004138fbc0016f0319690d6d8",
+            "id": "f5d19fe1ccc8575ed320e4da28d779d8",
             "name": "Search and filter users",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users",
             "description": "Search and filter users.",
@@ -3195,11 +3195,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ba60f488c2789f16177de59d78591ffd",
+            "id": "e5e537044493cfab3c9a4a321e464a73",
             "name": "Get a single user",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}",
             "description": "Get a single user.",
@@ -3226,11 +3226,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "8d24c45bae7632829e5f8acc3cff1233",
+            "id": "a884cc8dfc218258a658c7260e874c99",
             "name": "Get the authenticated user",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/me",
             "description": "Get the authenticated user.",
@@ -3249,11 +3249,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c2df78ce63c0384bb0982d10db3997b2",
+            "id": "104cfc96c4ae0e9e0d28dcc6dcf019d0",
             "name": "Get live streams",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams",
             "description": "Get a user's live streams.",
@@ -3294,11 +3294,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "31f4a1fcfb4d6178fc8073426f676f1b",
+            "id": "061e2a916c0b874bca2cf5ea02a61f9e",
             "name": "Create a live stream",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams",
             "description": "Create a live stream.",
@@ -3325,11 +3325,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "233bc7db07927254e306cae3fe8612fb",
+            "id": "3ee40a454ddecec2f4def5a37a1ce484",
             "name": "Get a live stream",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams\/{streamId}",
             "description": "Get a live stream.",
@@ -3363,11 +3363,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "73d5f5f7e024375fce7fd61eca0be6e0",
+            "id": "b568afb4f0ad13df7653cdd7140f3866",
             "name": "Modify a live stream",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/livestreams\/{streamId}",
             "description": "Modify a live stream.",
@@ -3408,11 +3408,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "fa10978e3165f73cab544b88e55a98b7",
+            "id": "bdf48c643c8d2787a4859c74a8f49610",
             "name": "Get a user's projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/projects",
             "description": "Get a user's projects.",
@@ -3439,11 +3439,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "a5f31fe3b155172437a80d787df712b1",
+            "id": "058161c775b4d35c4e53d590f5832dc7",
             "name": "Subscribe to an email notification",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/email_subscriptions\/{emailId}",
             "description": "Subscribe to an email notification",
@@ -3470,11 +3470,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c36a3fbfa3d827b85c5c521bd3894b7b",
+            "id": "e71e80e197a5ee3836f86e76b3965d4a",
             "name": "Unsubscribe from an email notification",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/email_subscriptions\/{emailId}",
             "description": "Unsubscribe from an email notification",
@@ -3501,11 +3501,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "fc3ac540579f74e16a9a0a2ff94f1499",
+            "id": "923de06d56aa318f289706dab10e8577",
             "name": "Follow a user",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/follow",
             "description": "Follow the user defined in the route path on behalf of the authenticated user.",
@@ -3532,11 +3532,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7c794d56b13692eabcfa610d91aa4a76",
+            "id": "ef0829610e6b548730b14221ea81b238",
             "name": "Unfollow a user",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/follow",
             "description": "Unfollow the user defined in the route path on behalf of the authenticated user.",
@@ -3563,11 +3563,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "1ca41d07ee513baa49fb6bcde7461620",
+            "id": "e0982e9a2f425c704d6cf07f2b17c2d7",
             "name": "Get a user's followers",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/followers",
             "description": "Get a user's followers.",
@@ -3594,11 +3594,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "222418be43e4db478aab48e6a4a1853b",
+            "id": "8e7d0abff7b061511b707aca5fc835bb",
             "name": "Get a user's following list",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/following",
             "description": "Get a list of users the specified user is following.",
@@ -3625,11 +3625,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "ab6c17e0547ce888034ac8eca76f664c",
+            "id": "a5945f6ea8ed6dfcddf1435a48346555",
             "name": "Get a user's stats",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/stats",
             "description": "Get a user's stats.",
@@ -3656,11 +3656,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7f773770e0076359eed0144fce530418",
+            "id": "5b8c4937a555b9b7a1b8d97efc1c09a8",
             "name": "Get a user's teams.",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/teams",
             "description": "Get a user's teams.",
@@ -3687,11 +3687,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "9fe296060921f734dd0e45c5c10078e3",
+            "id": "ce181dd4792dcd7884d4545eef5175bc",
             "name": "Get a user's work experience",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/work_experience",
             "description": "Get a user's work experience.",
@@ -3718,11 +3718,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "e3290da386746fcb7ab269fe87a4cb93",
+            "id": "b5907e85118132d926709b078601129c",
             "name": "Get appreciated projects",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/appreciations",
             "description": "Get a list of projects the user has appreciated.",
@@ -3749,11 +3749,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7af88d319e09ff53321c32c8975a3a4d",
+            "id": "253a6c530dbf0b1304c74f2006448468",
             "name": "Get a user's collections",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/collections",
             "description": "Get a list of the user's collections.",
@@ -3780,11 +3780,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "1d92604d02069a45f4e84f509d49f8b0",
+            "id": "1d7374ff23bda19e71ac6ef2c0f7fdfb",
             "name": "Enable a flag on a user",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/flags\/{flagName}",
             "description": "Enable a flag on a user",
@@ -3818,11 +3818,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "2911c8b2b143b45f0050d1af1f5fb576",
+            "id": "2dd504a1d111c7d1982a5fbbc8cae605",
             "name": "Increment profile view count",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/users\/{userId}\/view",
             "description": "Increment the view count on the given user's profile.",
@@ -3849,11 +3849,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d6fc3deb56f2e32e2b04d573a032d73f",
+            "id": "6a6d149e8ae76a7dddb6ec41725bc987",
             "name": "Get a user's work in progress",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}",
             "description": "Get a user's work in progress.",
@@ -3880,11 +3880,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d715a3fcf190d41ead22fbb6b5a2a735",
+            "id": "d3e1b7affce2843e3940d664699d56ec",
             "name": "Get a work in progress' segments",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments",
             "description": "Get a work in progress' segments.",
@@ -3911,11 +3911,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "b57881014a612a1e67475111e2ff2cce",
+            "id": "a718664c26554b74bc9e827fb5eb4d0b",
             "name": "Create a segment",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments",
             "description": "Create a segment.",
@@ -4019,11 +4019,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "c08cd6236516c88c0945b3ffde8dba55",
+            "id": "575a376564173ec9768b7599fc36f398",
             "name": "Get a segment",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}",
             "description": "Get a work in progress segment.",
@@ -4050,11 +4050,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "71d16c6b164c356545406171ab908f06",
+            "id": "56ccbe1c6cc92030e356e2d5566df249",
             "name": "Delete a segment",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}",
             "description": "Delete a work in progress segment.",
@@ -4081,11 +4081,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "4dbefb7492a42a1df89ac199794d7272",
+            "id": "3f36328de66aed918ef4875df346672e",
             "name": "Get a segment's reactions",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions",
             "description": "Get a list of reactions left on a segment.",
@@ -4112,11 +4112,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "10995fcba1918aef9b6978116080a073",
+            "id": "d04481b959c3b7b4c44c3e9145bf277b",
             "name": "React to a segment",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions\/{reactorId}",
             "description": "React to a segment.",
@@ -4150,11 +4150,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "bb697c1521c3a84b85c246bab14d8ef1",
+            "id": "fe6ecda122c541fc9414fffe1c469dac",
             "name": "Delete segment reaction",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/reactions\/{reactorId}",
             "description": "Delete a segment reaction.",
@@ -4181,11 +4181,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "d4389be9da912236970294fe0577d867",
+            "id": "6cfabcf8c6a64536327a083bd55f50d1",
             "name": "Get segment views",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/views",
             "description": "Get a list of viewers of a segment. The owner of the segment is not included in the list. This list can only be viewed by the story owner.",
@@ -4212,11 +4212,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "1208cf60e1702c34135c369b0f453ed1",
+            "id": "fc72176e480c04a2c676f0c2db917328",
             "name": "Create segment view",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/{userId}\/segments\/{segmentId}\/views",
             "description": "Mark the segment viewed by the authenticated user and increment the segment's view count by one.",
@@ -4243,11 +4243,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "20bceb0733ca26804e6a2cb94cb9091c",
+            "id": "347ea90ffbe173b4da2505a715a82a74",
             "name": "Get a list of segment search filters",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/filters",
             "description": "Search segments regardless of work in progress affiliation.",
@@ -4266,11 +4266,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "7ebdda68a6ea7ab1fd8760c276d5148d",
+            "id": "46532841242a0ed8cb47d76ae841a4e1",
             "name": "Get a list of works in progress",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/workinprogress\/list",
             "description": "Get a list of works in progress.",
@@ -4318,11 +4318,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "4accfc7a351086b498ff3167c7bbc5f0",
+            "id": "e9d1e00bd1d5f21420d6b8d568f130f8",
             "name": "Update a user's public profile",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/editor",
             "description": "Update a user's public profile.",
@@ -4405,11 +4405,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "4e38bf9a7477da5d0bb4b30132fa1e0d",
+            "id": "e0024988c0c626fec325d5c72e378e37",
             "name": "Update a user's avatar",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/avatar",
             "description": "Update a user's avatar.",
@@ -4436,11 +4436,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         },
         {
-            "id": "0dd0daaf97654ea94c30bef0ed80d2a6",
+            "id": "650c8da2b9dd2889048132cbc25af35d",
             "name": "Delete a user's avatar",
             "url": "http:\/\/cc-api-behance.adobe.io\/v2\/profile\/avatar",
             "description": "Delete a user's avatar.",
@@ -4459,7 +4459,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "22a6df2eb1a6ccbba3d2716265d43b51",
+            "collectionId": "36c33895077b40c3f205f71101807626",
             "rawModeData": ""
         }
     ]
